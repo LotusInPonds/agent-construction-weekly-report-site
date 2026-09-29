@@ -1,55 +1,247 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>代建周报</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 760px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>房地产代建业务周报 · 目录索引</title>
+<style>
+  :root{
+    --bg:#f4f6f8; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
+    --primary:#1e3a5f; --accent:#b91c1c; --line:#e5e7eb; --soft:#eef2f6;
+    --tag-a:#1e3a5f; --tag-b:#0f766e; --tag-c:#b45309;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.7; font-size:15px;}
+  .wrap{max-width:980px; margin:0 auto; padding:28px 20px 60px;}
 
-    h1 {
-      margin-bottom: 8px;
-    }
+  /* 头部 */
+  .hero{background:linear-gradient(135deg,#16283f 0%,#1e3a5f 60%,#2c5282 100%); color:#fff; border-radius:14px; padding:34px 36px; box-shadow:0 4px 18px rgba(30,58,95,.18);}
+  .hero .kicker{font-size:13px; letter-spacing:2px; color:#9fb6d0; margin-bottom:8px;}
+  .hero h1{font-size:28px; font-weight:700; letter-spacing:1px;}
+  .hero .sub{margin-top:6px; font-size:15px; color:#d3dde8;}
+  .hero .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px;}
+  .hero .meta span{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.18); border-radius:20px; padding:4px 14px; font-size:12.5px; color:#e8eef5;}
 
-    p {
-      color: #666;
-    }
+  /* 概览 */
+  .overview{margin-top:22px; display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:12px;}
+  .ov-card{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--primary); border-radius:10px; padding:14px 16px;}
+  .ov-card .n{font-size:22px; font-weight:700; color:var(--primary);}
+  .ov-card .t{font-size:12.5px; color:var(--sub); margin-top:2px;}
 
-    ul {
-      padding-left: 20px;
-    }
+  section{margin-top:26px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px 28px;}
+  section h2{font-size:19px; font-weight:700; color:var(--primary); display:flex; align-items:baseline; gap:10px; padding-bottom:12px; border-bottom:2px solid var(--soft);}
+  section h2 .no{background:var(--primary); color:#fff; font-size:13px; border-radius:6px; padding:2px 9px; flex-shrink:0;}
+  .lead{font-size:13px; color:var(--sub); margin:10px 0 4px;}
 
-    li {
-      margin: 12px 0;
-    }
+  /* 目录卡片 */
+  .idx-list{margin-top:10px;}
+  a.idx-card{display:flex; align-items:center; gap:16px; padding:16px 18px; border-bottom:1px dashed var(--line); text-decoration:none; color:inherit; transition:background .15s, box-shadow .15s; border-radius:8px;}
+  a.idx-card:last-child{border-bottom:none;}
+  a.idx-card:hover{background:var(--soft); box-shadow:0 2px 10px rgba(30,58,95,.08);}
+  .idx-card .left{flex-shrink:0; width:120px; text-align:center;}
+  .idx-card .badge{display:inline-block; font-size:11.5px; border-radius:4px; padding:1px 8px; color:#fff; font-weight:500; background:var(--tag-a); white-space:nowrap;}
+  .idx-card .badge.latest{background:var(--accent);}
+  .idx-card .date{font-size:16px; font-weight:700; color:var(--primary); margin-top:5px; font-variant-numeric:tabular-nums;}
+  .idx-card .mid{flex:1; min-width:0;}
+  .idx-card h4{font-size:15px; font-weight:600; line-height:1.5;}
+  .idx-card .win{font-size:12.5px; color:var(--sub); margin-top:3px;}
+  .idx-card .cnt{font-size:12px; color:var(--sub); margin-top:2px;}
+  .idx-card .go{flex-shrink:0; font-size:13px; color:var(--primary); font-weight:600; white-space:nowrap;}
+  a.idx-card:hover .go{color:var(--accent);}
 
-    a {
-      color: #0b57d0;
-      text-decoration: none;
-    }
+  /* 栏目一览 */
+  .cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:10px; margin-top:12px;}
+  .col-item{display:flex; align-items:flex-start; gap:8px; background:var(--soft); border:1px solid var(--line); border-radius:8px; padding:10px 12px; font-size:13.5px;}
+  .col-item .badge{flex-shrink:0; margin-top:2px; font-size:11.5px; border-radius:4px; padding:1px 8px; color:#fff; font-weight:500; white-space:nowrap;}
+  .b-policy{background:var(--tag-a);} .b-contract{background:#374151;} .b-fin{background:var(--tag-b);} .b-relief{background:var(--accent);} .b-rank{background:var(--tag-c);} .b-org{background:#7c3aed;} .b-co{background:#0e7490;} .b-legal{background:#9f1239;}
 
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  footer{margin-top:26px; text-align:center; font-size:12px; color:#9ca3af;}
+  @media (max-width:640px){ .wrap{padding:14px 12px 40px;} .hero{padding:24px 20px;} section{padding:18px 16px;} a.idx-card{flex-wrap:wrap; gap:8px;} .idx-card .left{width:auto; display:flex; align-items:center; gap:8px;} .idx-card .date{margin-top:0;} }
+  @media print{ body{background:#fff;} .wrap{max-width:100%;} .hero{box-shadow:none;} }
+</style>
 </head>
 <body>
-  <h1>代建周报</h1>
-  <p>请选择需要查看的周报：</p>
+<div class="wrap">
 
-  <ul>
-    <li><a href="代建周报-2026-09-28.html">2026-09-28 周报</a></li>
-    <li><a href="代建周报-2026-09-21.html">2026-09-21 周报</a></li>
-    <li><a href="代建周报-2026-09-14.html">2026-09-14 周报</a></li>
-    <li><a href="代建周报-2026-09-07.html">2026-09-07 周报</a></li>
-    <li><a href="代建周报-2026-08-31.html">2026-08-31 周报</a></li>
-  </ul>
+  <!-- ============ 头部 ============ -->
+  <div class="hero">
+    <div class="kicker">CHINA REAL ESTATE AGENCY CONSTRUCTION WEEKLY · INDEX</div>
+    <h1>房地产代建业务周报 · 目录索引</h1>
+    <div class="sub">政策制度 · 合同文本 · 头部财报 · 纾困动态 · 榜单研究 · 行业组织 · 头部动态</div>
+    <div class="meta">
+      <span id="meta-count">共 5 期</span>
+      <span id="meta-range">覆盖 2026-08-21 至 2026-09-27</span>
+      <span id="meta-updated">目录更新：2026-09-29</span>
+      <span>适用：法务 · 合规风控视角</span>
+    </div>
+  </div>
+
+  <!-- ============ 概览 ============ -->
+  <div class="overview">
+    <div class="ov-card"><div class="n" id="ov-issues">5 期</div><div class="t">已归档周报期数</div></div>
+    <div class="ov-card"><div class="n" id="ov-items">134 条</div><div class="t">累计收录行业信息条目</div></div>
+    <div class="ov-card"><div class="n" id="ov-latest">2026-09-28</div><div class="t">最新一期归档日期</div></div>
+    <div class="ov-card"><div class="n" id="ov-weeks">6 周</div><div class="t">覆盖时间跨度</div></div>
+  </div>
+
+  <!-- ============ 周报目录 ============ -->
+  <section>
+    <h2><span class="no">一</span>周报目录</h2>
+    <p class="lead">按归档日期倒序排列，点击卡片即可阅读对应周报。目录由脚本自动扫描本目录下的周报文件生成——<b>每周新增周报后，重新打开本页即自动纳入最新一期</b>。</p>
+    <div class="idx-list" id="report-list">
+
+      <a class="idx-card" href="代建周报-2026-09-28.html">
+        <div class="left"><span class="badge latest">第 5 期 · 最新</span><div class="date">2026-09-28</div></div>
+        <div class="mid"><h4>房地产代建业务周报 · 2026-09-28</h4><div class="win">收集窗口：2026-09-21 至 2026-09-27</div><div class="cnt">收录 38 条</div></div>
+        <div class="go">阅读本期 →</div>
+      </a>
+
+      <a class="idx-card" href="代建周报-2026-09-21.html">
+        <div class="left"><span class="badge">第 4 期</span><div class="date">2026-09-21</div></div>
+        <div class="mid"><h4>房地产代建业务周报 · 2026-09-21</h4><div class="win">收集窗口：2026-09-14 至 2026-09-20</div><div class="cnt">收录 33 条</div></div>
+        <div class="go">阅读本期 →</div>
+      </a>
+
+      <a class="idx-card" href="代建周报-2026-09-14.html">
+        <div class="left"><span class="badge">第 3 期</span><div class="date">2026-09-14</div></div>
+        <div class="mid"><h4>房地产代建业务周报 · 2026-09-14</h4><div class="win">收集窗口：2026-09-07 至 2026-09-13</div><div class="cnt">收录 25 条</div></div>
+        <div class="go">阅读本期 →</div>
+      </a>
+
+      <a class="idx-card" href="代建周报-2026-09-07.html">
+        <div class="left"><span class="badge">第 2 期</span><div class="date">2026-09-07</div></div>
+        <div class="mid"><h4>房地产代建业务周报 · 2026-09-07</h4><div class="win">收集窗口：2026-08-31 至 09-06</div><div class="cnt">收录 19 条</div></div>
+        <div class="go">阅读本期 →</div>
+      </a>
+
+      <a class="idx-card" href="代建周报-2026-08-31.html">
+        <div class="left"><span class="badge">第 1 期</span><div class="date">2026-08-31</div></div>
+        <div class="mid"><h4>房地产代建业务周报 · 2026-08-31</h4><div class="win">收集窗口：2026-08-21 至 08-30</div><div class="cnt">收录 19 条</div></div>
+        <div class="go">阅读本期 →</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============ 栏目一览 ============ -->
+  <section>
+    <h2><span class="no">二</span>周报栏目一览</h2>
+    <p class="lead">每期周报均按以下 8 个固定栏目编排，便于跨期对照检索。</p>
+    <div class="cols">
+      <div class="col-item"><span class="badge b-policy">一</span><span>政策与制度文件（代建制办法、城市更新、保交楼白名单）</span></div>
+      <div class="col-item"><span class="badge b-contract">二</span><span>合同示范文本（招标文件、代建合同范本与费率条款）</span></div>
+      <div class="col-item"><span class="badge b-fin">三</span><span>头部公司财报与公告（绿城管理等 TOP10 财务风险指标）</span></div>
+      <div class="col-item"><span class="badge b-relief">四</span><span>纾困代建 / 保交楼动态（AMC、信托、平稳基金案例）</span></div>
+      <div class="col-item"><span class="badge b-rank">五</span><span>行业榜单与研究报告（中指、克而瑞、观点指数）</span></div>
+      <div class="col-item"><span class="badge b-org">六</span><span>行业组织成果（代建分会、典型案例集、星级评价）</span></div>
+      <div class="col-item"><span class="badge b-co">七</span><span>头部代建公司动态（新签、中标、战略合作）</span></div>
+      <div class="col-item"><span class="badge b-legal">八</span><span>法务视角要点提示（合同审查 / 风险防控 / 监管动向）</span></div>
+    </div>
+  </section>
+
+  <footer>房地产代建业务周报 · 目录索引 ｜ 目录由脚本自动扫描同目录周报文件生成（代建周报-YYYY-MM-DD.html）</footer>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var FIRST_DATE = '2026-08-31';   // 首期归档日期（周一），探测起点
+  var STEP_MS = 7 * 86400000;      // 按周递增
+  var MAX_MISS = 2;                // 连续未命中次数容忍（允许个别周跳过）
+
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  function fmt(d){ return d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate()); }
+
+  function candidates(){
+    var list = [];
+    var d = new Date(FIRST_DATE + 'T00:00:00');
+    var now = new Date(); now.setHours(0,0,0,0);
+    while (d.getTime() <= now.getTime() + 86400000) {  // 允许到明天为止
+      list.push(fmt(d));
+      d = new Date(d.getTime() + STEP_MS);
+    }
+    return list;
+  }
+
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+  function parseDoc(html, dateStr){
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    var issue = null, win = null;
+    var metas = doc.querySelectorAll('.hero .meta span');
+    metas.forEach(function(s){
+      var t = s.textContent || '';
+      var m = t.match(/第\s*(\d+)\s*期/);
+      if (m && issue === null) issue = parseInt(m[1], 10);
+      if (t.indexOf('收集窗口') !== -1 && win === null) win = t.replace('收集窗口：','').trim();
+    });
+    var items = doc.querySelectorAll('.item').length;
+    if (issue === null && items === 0 && win === null) return null; // 不像周报页
+    return { date: dateStr, issue: issue, win: win || null, items: items, file: '代建周报-' + dateStr + '.html' };
+  }
+
+  function fetchOne(dateStr){
+    return fetch(encodeURI('代建周报-' + dateStr + '.html'), { cache: 'no-cache' })
+      .then(function(r){ if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then(function(html){ var p = parseDoc(html, dateStr); return p ? p : null; })
+      .catch(function(){ return 'MISS'; });
+  }
+
+  function discover(){
+    var dates = candidates();
+    var seq = Promise.resolve();
+    var found = [], miss = 0, aborted = false;
+    dates.forEach(function(ds){
+      seq = seq.then(function(){
+        if (aborted) return null;
+        return fetchOne(ds).then(function(r){
+          if (r === 'MISS') { miss++; if (miss >= MAX_MISS) aborted = true; return null; }
+          miss = 0;
+          if (r) found.push(r);
+          return null;
+        });
+      });
+    });
+    return seq.then(function(){ return found; });
+  }
+
+  function render(list){
+    if (!list.length) return;
+    list.sort(function(a,b){ return a.date < b.date ? 1 : -1; });
+    var box = document.getElementById('report-list');
+    var html = '';
+    list.forEach(function(r, i){
+      var badge = r.issue ? ('第 ' + r.issue + ' 期') : '周报';
+      if (i === 0) badge += ' · 最新';
+      var cnt = r.items ? ('收录 ' + r.items + ' 条') : '';
+      html += '<a class="idx-card" href="' + esc(r.file) + '">'
+        + '<div class="left"><span class="badge' + (i === 0 ? ' latest' : '') + '">' + esc(badge) + '</span>'
+        + '<div class="date">' + esc(r.date) + '</div></div>'
+        + '<div class="mid"><h4>房地产代建业务周报 · ' + esc(r.date) + '</h4>'
+        + (r.win ? '<div class="win">收集窗口：' + esc(r.win) + '</div>' : '')
+        + (cnt ? '<div class="cnt">' + esc(cnt) + '</div>' : '')
+        + '</div><div class="go">阅读本期 →</div></a>';
+    });
+    box.innerHTML = html;
+
+    // 概览与头部 meta 更新
+    var totalItems = list.reduce(function(s,r){ return s + (r.items || 0); }, 0);
+    var first = list[list.length - 1], last = list[0];
+    var weeks = Math.round((new Date(last.date) - new Date(first.date)) / STEP_MS) + 1;
+    var now = new Date();
+    document.getElementById('ov-issues').textContent = list.length + ' 期';
+    document.getElementById('ov-items').textContent = totalItems + ' 条';
+    document.getElementById('ov-latest').textContent = last.date;
+    document.getElementById('ov-weeks').textContent = weeks + ' 周';
+    document.getElementById('meta-count').textContent = '共 ' + list.length + ' 期';
+    document.getElementById('meta-updated').textContent = '目录更新：' + fmt(now);
+  }
+
+  // 静态列表兜底已内置；HTTP 环境（预览面板 / 本地服务）下自动扫描刷新
+  if (location.protocol !== 'file:') {
+    discover().then(render).catch(function(){ /* 静默：保留内置目录 */ });
+  }
+})();
+</script>
 </body>
 </html>
