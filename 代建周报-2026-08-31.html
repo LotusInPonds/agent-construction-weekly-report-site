@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="nBO7IdZnHXw3hkHILFHP61">
+<head data-page-node-id="moQO4EkKOoFEEN4sfwn4RU">
+<meta charset="UTF-8" data-page-node-id="wL0iCQjYhA9bJH4COF3jv7">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="lIwyViAxEAdZsapoQ9htQG">
+<title>房地产代建业务周报 · 2026-08-31</title>
+<style>
+  :root{
+    --bg:#f4f6f8; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
+    --primary:#1e3a5f; --accent:#b91c1c; --line:#e5e7eb; --soft:#eef2f6;
+    --tag-a:#1e3a5f; --tag-b:#0f766e; --tag-c:#b45309;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.7; font-size:15px;}
+  .wrap{max-width:980px; margin:0 auto; padding:28px 20px 60px;}
+
+  /* 头部 */
+  .hero{background:linear-gradient(135deg,#16283f 0%,#1e3a5f 60%,#2c5282 100%); color:#fff; border-radius:14px; padding:34px 36px; box-shadow:0 4px 18px rgba(30,58,95,.18);}
+  .hero .kicker{font-size:13px; letter-spacing:2px; color:#9fb6d0; margin-bottom:8px;}
+  .hero h1{font-size:28px; font-weight:700; letter-spacing:1px;}
+  .hero .sub{margin-top:6px; font-size:15px; color:#d3dde8;}
+  .hero .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px;}
+  .hero .meta span{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.18); border-radius:20px; padding:4px 14px; font-size:12.5px; color:#e8eef5;}
+
+  /* 概览 */
+  .overview{margin-top:22px; display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:12px;}
+  .ov-card{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--primary); border-radius:10px; padding:14px 16px;}
+  .ov-card .n{font-size:22px; font-weight:700; color:var(--primary);}
+  .ov-card .t{font-size:12.5px; color:var(--sub); margin-top:2px;}
+
+  section{margin-top:26px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px 28px;}
+  section h2{font-size:19px; font-weight:700; color:var(--primary); display:flex; align-items:baseline; gap:10px; padding-bottom:12px; border-bottom:2px solid var(--soft);}
+  section h2 .no{background:var(--primary); color:#fff; font-size:13px; border-radius:6px; padding:2px 9px; flex-shrink:0;}
+  section h3{font-size:15.5px; font-weight:600; margin:20px 0 6px; color:var(--ink);}
+  .lead{font-size:13px; color:var(--sub); margin:10px 0 4px;}
+
+  /* 条目 */
+  .item{padding:14px 0; border-bottom:1px dashed var(--line);}
+  .item:last-child{border-bottom:none;}
+  .item .head{display:flex; align-items:flex-start; gap:8px;}
+  .item .badge{flex-shrink:0; margin-top:3px; font-size:11.5px; border-radius:4px; padding:1px 8px; color:#fff; font-weight:500;}
+  .b-policy{background:var(--tag-a);} .b-contract{background:#374151;} .b-fin{background:var(--tag-b);} .b-relief{background:var(--accent);} .b-rank{background:var(--tag-c);} .b-org{background:#7c3aed;} .b-co{background:#0e7490;}
+  .item h4{font-size:15px; font-weight:600; line-height:1.5;}
+  .item .src{font-size:12px; color:var(--sub); margin-top:4px;}
+  .item .src a{color:var(--primary); text-decoration:none; border-bottom:1px dotted #9fb0c5;}
+  .item .src a:hover{color:var(--accent);}
+  .item .body{margin-top:6px; font-size:14px; color:#374151;}
+  .item ul{margin:6px 0 0 20px;}
+  .item li{margin-top:3px;}
+
+  /* 表格 */
+  table{width:100%; border-collapse:collapse; margin-top:10px; font-size:13.5px;}
+  th{background:var(--soft); color:var(--primary); font-weight:600; text-align:left; padding:8px 12px; border:1px solid var(--line); white-space:nowrap;}
+  td{padding:8px 12px; border:1px solid var(--line); vertical-align:top;}
+  tr:nth-child(even) td{background:#fafbfc;}
+  .num{font-variant-numeric:tabular-nums; font-weight:600;}
+  .down{color:var(--accent);} .up{color:#0f766e;}
+
+  /* 提示框 */
+  .notice{background:var(--soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:12px 16px; margin-top:14px; font-size:13.5px; color:#374151;}
+  .notice b{color:var(--accent);}
+
+  /* 要点 */
+  .points{counter-reset:pt; list-style:none;}
+  .points li{counter-increment:pt; position:relative; padding:12px 0 12px 44px; border-bottom:1px dashed var(--line);}
+  .points li:last-child{border-bottom:none;}
+  .points li::before{content:counter(pt); position:absolute; left:0; top:12px; width:28px; height:28px; background:var(--primary); color:#fff; border-radius:50%; font-size:13px; font-weight:600; display:flex; align-items:center; justify-content:center;}
+  .points .cat{display:inline-block; font-size:11.5px; background:#eef2f6; color:var(--primary); border:1px solid #d7e0ea; border-radius:4px; padding:0 7px; margin-right:6px;}
+
+  footer{margin-top:26px; text-align:center; font-size:12px; color:#9ca3af;}
+  @media (max-width:640px){ .wrap{padding:14px 12px 40px;} .hero{padding:24px 20px;} section{padding:18px 16px;} th,td{padding:6px 8px;} }
+  @media print{ body{background:#fff;} .wrap{max-width:100%;} .hero{box-shadow:none;} section{page-break-inside:avoid;} }
+</style>
+</head>
+<body data-page-node-id="3g4P6GQHRdehqQjD3W9W3C">
+<div class="wrap" data-page-node-id="PQkuEIUzzbgE49ZPWHVW1k">
+
+  <!-- ============ 头部 ============ -->
+  <div class="hero" data-page-node-id="lRwxV5VtgPVdHQLrpMjI29">
+    <div class="kicker" data-page-node-id="P8nAJclxITCyQNxsRVqTyX">CHINA REAL ESTATE AGENCY CONSTRUCTION WEEKLY</div>
+    <h1 data-page-node-id="mhtyWE3zgniHsE1ZKOPTJa">房地产代建业务周报</h1>
+    <div class="sub" data-page-node-id="51a5B6lVBliiXljBqqN8HQ">政策制度 · 合同文本 · 头部财报 · 纾困动态 · 榜单研究 · 行业组织 · 头部动态</div>
+    <div class="meta" data-page-node-id="NOrIM5dCIFj5QZxdmRH5nd">
+      <span data-page-node-id="sLjlkmFXkaN61bnPsmJ10o">首期示范版</span>
+      <span data-page-node-id="AqhSs8FYNvvHsIFIs3d8lJ">收集窗口：2026-08-21 至 08-30</span>
+      <span data-page-node-id="cXW9MVXxA0TC0gloiHSf77">生成时间：2026-08-31</span>
+      <span data-page-node-id="VxQUI7v1fBZ5QYZpmAV4eZ">适用：法务 · 合规风控视角</span>
+    </div>
+  </div>
+
+  <!-- ============ 本周概览 ============ -->
+  <div class="overview" data-page-node-id="GNQXrmk4GWhncomqjdYawP">
+    <div class="ov-card" data-page-node-id="ybIp46mlHm7AlUmJnBtBCM"><div class="n" data-page-node-id="D1IRpIRioGPvUJOmQTAJre">5 份</div><div class="t" data-page-node-id="Z7MAxoInqG7zURPmtsqTGp">地方代建管理办法出台 / 征求意见</div></div>
+    <div class="ov-card" data-page-node-id="2qSqGVBiPqcwE8iRi65XiI"><div class="n" data-page-node-id="hQFoaX6zyVngzbKRVvWE9r">2 家</div><div class="t" data-page-node-id="tfFTCpBcsPp03y8ciRJXSK">港股上市代建公司披露中报</div></div>
+    <div class="ov-card" data-page-node-id="ugIT8padGUeTk7LNF9pxKg"><div class="n" data-page-node-id="Do0JkbtiAdB6Xy5VZSjr72">4 起</div><div class="t" data-page-node-id="ikKPo6AUD7iVN59npwqnBO">纾困 / 保交楼项目复工交付进展</div></div>
+    <div class="ov-card" data-page-node-id="Dcvg9fSbER5O4dDQAyrw3b"><div class="n" data-page-node-id="JLRZuy5gDidTB4OklvTfnp">1 张</div><div class="t" data-page-node-id="DSZEXQiCsaVABxyRczX304">代建企业品牌影响力 TOP10 榜单发布</div></div>
+  </div>
+
+  <!-- ============ 一、政策与制度文件 ============ -->
+  <section data-page-node-id="afPv5qcsQLDJ33uOaK7fkc">
+    <h2 data-page-node-id="8qExYhnRzfQEhEj74FEoQT"><span class="no" data-page-node-id="C4vw93Pw6OFR5md46de8O3">一</span>政策与制度文件</h2>
+    <p class="lead" data-page-node-id="EO0lu6DA94GiAijoP1PrlK">本周地方代建制度密集更新：2 份正式印发、3 份公开征求意见，代建管理从原则框架向全流程精细化管控升级。</p>
+
+    <div class="item" data-page-node-id="IrgsTYHZsmuU8Amc7W9Lni">
+      <div class="head" data-page-node-id="SIlJXqDLGt0VsMVqNO8gOA"><span class="badge b-policy" data-page-node-id="PEg5jf4BgRDczGACfHehQ2">印发</span>
+        <h4 data-page-node-id="kxeRZXEW7n9HVb9botfvks">漳州开发区管委会印发《工程项目代建管理办法（2026年修订版）》（漳招管规〔2026〕1号）</h4></div>
+      <div class="body" data-page-node-id="GB3trwDgagnitK5Bxb2M0q">
+        <ul data-page-node-id="GyDpt9QUlwfoDZcXJVrDCh">
+          <li data-page-node-id="bEsb2goptN7koIzNp02V1j">8 月 11 日经管委会主任办公会审议通过，8 月 17 日印发，8 月 21 日官网公开。</li>
+          <li data-page-node-id="lOkzah9RJr5uJcC8TzvFqx">适用范围：管委会财政资金项目、管委会资金占比超 50% 项目、管委会拥有实际控制权项目等四类。</li>
+          <li data-page-node-id="hlQ1MhbCS5XfxiguDBM5EG">关键条款：<b data-page-node-id="h8vdLJ2kQ6ST9FYrgRmEw4">代建单位不得承担代建项目的施工或材料设备供应</b>；业主单位有权单方终止代建项目或调整规模、工期、移交时限（需签补充协议）；代建项目经理变更须书面报备。</li>
+          <li data-page-node-id="bO0KnDOV75CFiAAsSjBdc7">代建费支付：竣工前累计不超过总额 80%，工程结算后再付 15%，余额待缺陷责任期满后清算。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="dXJbHmWkRgunkeYJmwXEFY">来源：漳州市人民政府官网 <a href="https://www.zhangzhou.gov.cn/cms/html/zzzsjjjjskfq/2026-08-21/55860701.html" target="_blank" data-page-node-id="sLbRrSVNQeLlrDqeYiGMSQ">https://www.zhangzhou.gov.cn/cms/html/zzzsjjjjskfq/2026-08-21/55860701.html</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="Jfj6NmPe9Ebe84wLmyi4vc">
+      <div class="head" data-page-node-id="hO2fydVgJn1BqxSXfyyXeT"><span class="badge b-policy" data-page-node-id="uZLToQqZGCATdd6GzzvVxl">印发</span>
+        <h4 data-page-node-id="DMnKwww47WCEDySJz5VzEV">遂宁市船山区印发《政府投资非经营性项目代建管理办法（试行）》</h4></div>
+      <div class="body" data-page-node-id="PiAjFgDokJuaV2S3uJpuTl">
+        <ul data-page-node-id="BfGqYohhvH8bJn7YvH6rBk">
+          <li data-page-node-id="dSFNrFVO7wlmJOcjMmgB5v">8 月 24 日印发，经区政府常务会议通过。</li>
+          <li data-page-node-id="7RHvkEyS0QHzxEUB465Tnu">投资估算 400 万元及以上的政府投资非经营性项目原则上可纳入代建；明确了交通、住房保障、教育文体等不同类别项目的建设单位归属。</li>
+          <li data-page-node-id="tVVDjlpZTCzhBzb6HwPbVA">代建定义：代建单位在委托权限内对项目建设实施全过程管理，竣工验收合格后移交建设单位。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="cC6laugWVHLbQwpQJCTjro">来源：遂宁市船山区人民政府官网 <a href="https://www.chuanshan.gov.cn/phone/show/7e48133527dfb6fd710c2313b85f98eb.html" target="_blank" data-page-node-id="YI5k6vnMkOdJ4EEKCiXpaL">https://www.chuanshan.gov.cn/phone/show/7e48133527dfb6fd710c2313b85f98eb.html</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="BmClFePQ2Hk8hi6mrQHviN">
+      <div class="head" data-page-node-id="0gaCzawy1ZFSPzWTlyPm8M"><span class="badge b-policy" data-page-node-id="XW2jd5gSNpgPyoSwyFoH3P">征求意见</span>
+        <h4 data-page-node-id="Jpkw8j2CT4gGIjGYMEm8qs">上海市青浦区《政府投资项目代理建设实施办法（征求意见稿）》公开征求意见</h4></div>
+      <div class="body" data-page-node-id="WAVv9xSc7bKqPzvA1YAkWm">
+        <ul data-page-node-id="BRlA97hhEosF6aFTZkEenH">
+          <li data-page-node-id="ge4Ao28Gfi6wFiVPkqX4R4">8 月 21 日发布，意见反馈截止 <b data-page-node-id="GQmiukjbWwxBgDaGqe6ScG">2026 年 9 月 1 日</b>（临近截止，如需反馈请尽快）。</li>
+          <li data-page-node-id="7AeO7tbvoPBs1VvvYotfR9">背景：原办法（青发改〔2024〕118号）有效期两年届满，依据《政府投资条例》《上海市市级建设财力项目代理建设管理办法》重新起草。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="2eGr1eyDJFZadqsQDRDr4f">来源：上海市青浦区人民政府官网 <a href="https://www.shqp.gov.cn/plan/fgw_tzgg/20260821/1386009.html" target="_blank" data-page-node-id="JQqhYoSNB9XvoF6VSibB9j">https://www.shqp.gov.cn/plan/fgw_tzgg/20260821/1386009.html</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="3xRsl6PEgzVsTS55mbdNwR">
+      <div class="head" data-page-node-id="dN7iXPJNs6H6KxfeUk4gkM"><span class="badge b-policy" data-page-node-id="HCH4ghgZj9RZ1boNYq7aRZ">征求意见</span>
+        <h4 data-page-node-id="fSkYoX61tta3zrD15ACmBz">内蒙古鄂托克前旗《本级政府投资项目代建管理办法（征求意见稿）》公开征求意见</h4></div>
+      <div class="body" data-page-node-id="g30E98wS6oHiWYwWcrukeD">
+        <ul data-page-node-id="jixZXf65DPUSkBt9rcVcFZ">
+          <li data-page-node-id="SfEHCVxBCA1jJaEIrgZ0X0">8 月 26 日公示，征求意见期至 9 月 17 日。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="uxIiBVdGRtLeSIS022lbGy">来源：鄂托克前旗人民政府官网 <a href="http://www.etkqq.gov.cn/xwdt/xwdt_tzgg/202608/t20260826_3915367.html" target="_blank" data-page-node-id="Nlh11ctaNEn6sONQQNP3oE">http://www.etkqq.gov.cn/xwdt/xwdt_tzgg/202608/t20260826_3915367.html</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="2DSNPCqIISUmJzALdZNYrk">
+      <div class="head" data-page-node-id="ytUtrDaBGmAVnhaApyywWB"><span class="badge b-policy" data-page-node-id="gwC0qq67j4oaHzCOL9eQgx">征求意见</span>
+        <h4 data-page-node-id="9AJldyx305p7XgCb2uzaCw">自贡高新区《政府投资项目投资监督管理办法（修订稿）（征求意见稿）》公开征求意见</h4></div>
+      <div class="body" data-page-node-id="o20Z2k0I6QGJfDmAg9IXlt">
+        <ul data-page-node-id="iQpFg0eO0jlvhCCRBVSLgC">
+          <li data-page-node-id="A1TZUQfniXgRhp64ADtUdC">涉及代建管理费计取（依据财建〔2016〕504号）、第三方中介机构选聘、<b data-page-node-id="ZUmoGECGKZkPBDbIFbykyV">代建单位与造价控制第三方不得为同一单位或存在控股管理关系</b> 等条款。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="7wfKBK0RIMbZkxYbdnDqx7">来源：自贡高新区管委会官网 <a href="https://www.zggx.gov.cn/zggx/collect/detail.html?id=2092877038723866624" target="_blank" data-page-node-id="hTiQZEfa3tQWSUpKpL9es7">https://www.zggx.gov.cn/zggx/collect/detail.html?id=2092877038723866624</a></div>
+    </div>
+
+    <div class="notice" data-page-node-id="9avB5Gsxxs9xWQmYiRo0Dr"><b data-page-node-id="cOncfqU2WtFB9EDOuzcZS7">提示：</b>结合前期跟踪，厦门市政府投资项目代建招标文件/合同示范文本（2025年版）已于 2026 年 3 月 1 日施行；漳州开发区办法授权规划建设局制定《建设项目代建合同示范文本》，后续可跟踪其发布。</div>
+  </section>
+
+  <!-- ============ 二、合同示范文本 ============ -->
+  <section data-page-node-id="bDma4i1vzJO3DsNvXzWzbM">
+    <h2 data-page-node-id="AgayzxvnVIHPkmmLOkkG4b"><span class="no" data-page-node-id="EZawC0dDqUEMDAFUDm0caO">二</span>合同示范文本</h2>
+    <p class="lead" data-page-node-id="bYNivA2oHfQ3Oe2ThaaKOo">本周无新版示范文本直接发布。</p>
+    <div class="notice" data-page-node-id="NwBsD4GDmKAp54CaVvX0GQ">线索：漳州开发区《工程项目代建管理办法（2026年修订版）》第十八条明确"规划建设局负责制定《建设项目代建合同示范文本》"，预计后续将发布，纳入跟踪范围。近期可继续关注厦门 2025 年版示范文本的落地反馈与其他城市跟进动态。</div>
+  </section>
+
+  <!-- ============ 三、头部公司财报与公告 ============ -->
+  <section data-page-node-id="re6uh1dROC308g16iNGJ8H">
+    <h2 data-page-node-id="jzDD6D8QSnZn6iRWhRuoA8"><span class="no" data-page-node-id="GrAcNvNgZoQjg3rwy4wKmc">三</span>头部公司财报与公告</h2>
+
+    <h3 data-page-node-id="sunmkKjmvEWGVdCUZHOa1o">3.1 绿城管理（09979.HK）：2026 中期业绩（8 月 25 日披露，8 月 26 日业绩发布会）</h3>
+    <div class="item" style="border:none; padding-top:6px;" data-page-node-id="c7zyxXvZAnN4a6LAyMUHdV">
+      <div class="head" data-page-node-id="Yv17ZTxrBoVlBpaTeSoMc4"><span class="badge b-fin" data-page-node-id="pcPkWMyczluUjlkVj8Q76V">中报</span>
+        <h4 data-page-node-id="BUDrGKEpo5wnD4Zy8nNS2e">营收利润现金流三指标同向转正，管理层称"最困难阶段已经过去"；但新签规模同比降约三成</h4></div>
+      <div class="body" data-page-node-id="mGAKva9XldaDrBs4vMFDzd">
+        <table data-page-node-id="g7ddCJRHe53FJFHHvzMaSe">
+          <tr data-page-node-id="dHs1FtH2MQWlfJ01rtjbD1"><th data-page-node-id="Oy8a7SBTfQx9dBPwV0301i">指标</th><th data-page-node-id="PUIri6g4FKRsheMIqiI0El">2026H1</th><th data-page-node-id="vvSKveCpGAzGa9ENAAB4ZV">同比</th><th data-page-node-id="C8CxHzF37vifMeBcbtVg3H">备注</th></tr>
+          <tr data-page-node-id="CAVHyJ8lZJGmfzoITRcBH8"><td data-page-node-id="bX4k5IOK8u91uvFJxs2H3q">营业收入</td><td class="num" data-page-node-id="cmMQOVfUUybVAyj6cktPBV">14.66 亿元</td><td class="up" data-page-node-id="CpteC2LDmCUIto6Oov7fj4">+7%</td><td data-page-node-id="cyJDGYt7pIL2v6NU12n0rD">代建服务收入占 97.2%</td></tr>
+          <tr data-page-node-id="WeITqiDXwZOgMfmn9vpwgH"><td data-page-node-id="OTd6rw5mecoj7sDXL17Nh2">归母净利润</td><td class="num" data-page-node-id="AF2Qis4W5DFQCQOmsRL6vC">2.71 亿元</td><td class="up" data-page-node-id="l1NKvstN5fRmPvOl8uYr4Y">+6%</td><td data-page-node-id="qDUhA4XFT7tHKDF95IhHuw">毛利率 41.1%（+0.9pct）</td></tr>
+          <tr data-page-node-id="AEqrbxFOjku8mgV4phcpw3"><td data-page-node-id="DfZc0Y6t8VeJRwGAbQWDBM">经营性现金流净额</td><td class="num" data-page-node-id="spfhAmwHmDRjLDvqLeUhpU">1.34 亿元</td><td class="up" data-page-node-id="7aTNKvL6edhb3Fwif6KDyn">+20%</td><td data-page-node-id="IEdGmvq6Xk2RIB4GCL6xCq">连续两年同比改善</td></tr>
+          <tr data-page-node-id="cdc5DG9v5KpF4KcD9B8oRN"><td data-page-node-id="EnTyLVghFmLJr0DElCROar">新签代建面积</td><td class="num" data-page-node-id="ZoNIrsoQbPFhWz100QPcWN">1352 万㎡</td><td class="down" data-page-node-id="3xD3NbkaJAirNJ0ecNvTvG">-32%</td><td data-page-node-id="KkFfEj3YOKO4zqJB6UXjT8">仍居行业第一</td></tr>
+          <tr data-page-node-id="lzEtW9U8LR2KpVZzpksV3g"><td data-page-node-id="V5RFW7ybRsGMVHbvsWZaX7">新拓代建费</td><td class="num" data-page-node-id="xLbnYBgf3G456qoAd0rLmY">34.1 亿元</td><td class="down" data-page-node-id="5sxvt2UHROdhVvTbtGP1lB">-31.7%</td><td data-page-node-id="hE6pzqXTV2FJ3A86F4lyb8">一二线城市占比 64.3%</td></tr>
+          <tr data-page-node-id="IQKAz8IoeOVrT1d2RIQt19"><td data-page-node-id="t76vB7CMThsNDkG9I43op1">交付</td><td class="num" data-page-node-id="6I8Jtc0n7zXGY6DnqjfPGc">56 项目 / 545.6 万㎡</td><td class="up" data-page-node-id="r0zp9QZTbhPkYhQmME3geN">+17.3%</td><td data-page-node-id="NB3LoouhGeBhhqO5uJKIxB">服务超 2.7 万户</td></tr>
+          <tr data-page-node-id="OXmRJ2bZoUmKSd4OutEdA2"><td data-page-node-id="Qj295wzsq9EDlHC3ra4mi5">在手订单</td><td class="num" data-page-node-id="oGQYUbqSkOJbTwDda1VNCg">1.20 亿㎡</td><td data-page-node-id="QZhCueGjAvtyyY5C4hzzj1">—</td><td data-page-node-id="nukZgqxjk53cvEDjHeXy5i">待开发面积占比 44.7%</td></tr>
+          <tr data-page-node-id="vwLeDqygGcuzTFzrqEDFWi"><td data-page-node-id="Rv4w443PuOYkhvYTNSAmCQ">中期股息</td><td class="num" data-page-node-id="Ly3sBgQGd05zKXRpz13rm0">0.076 元/股</td><td data-page-node-id="hBQENvervF9ldaCABFObi0">—</td><td data-page-node-id="dbWcKoH5NADETaWcIvqNGm">全年派息比例预期不低于 80%</td></tr>
+        </table>
+        <ul style="margin-top:10px;" data-page-node-id="XKqHXNJL2VVDxmu7gTd4Bm">
+          <li data-page-node-id="6jmD7HfYkzFNXVQMgDOrni"><b data-page-node-id="TVH7ydTNnlxK9zPgCplUmU">回款风险结构（法务重点）：</b>应收款项类资产约 10.82 亿元（扣除拨备后净额 9.90 亿）；合同资产净额升至 <b data-page-node-id="CU1LMoY3mFydKAg0m9OTdG">17.54 亿元</b>（环比 +13.7%），广义应收类资产合计约 27.44 亿元、占营收比重超 187%——回款压力正从应收端向合同资产端（履约节点相关）转移。</li>
+          <li data-page-node-id="b9lYA9DGMe8GYzq6OhiFLN">账龄结构改善：180 天以内短期应收降至 1.47 亿，365 天以上长账龄应收降至 0.65 亿（-29%）。</li>
+          <li data-page-node-id="DUbaDn4Ch5afYt9BtX6NH3">国企及政府委托方回款占比 77%，民营 23%；公司自 2024 年起对合同资产计提减值，2026 年 6 月末拨备 1.07 亿元。</li>
+          <li data-page-node-id="1xZcatwhkOdFqh8EkSyOaj">战略方向：城市更新（含城投存量土地）、纾困代建、存量运营、海外代建（已设海外事业部）。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="dXenUwhLoDWDbRiP6Qax5Q">来源：每日经济新闻 <a href="https://cn.dailyeconomic.com/2026/08/27/155256.html" target="_blank" data-page-node-id="Pvq4EgUQyh5Vgvm0NgczFv">cn.dailyeconomic.com</a> ｜ 观点网业绩会报道 <a href="https://www.163.com/dy/article/L5AFHV4V0519D45U.html" target="_blank" data-page-node-id="vcgX6paOQXfKF9D3CU6NET">www.163.com</a> ｜ 21世纪经济报道（回款结构） <a href="https://www.toutiao.com/article/7680188810201760296/" target="_blank" data-page-node-id="tzMLggjSG5kW4fPIWcYLfx">www.toutiao.com</a></div>
+    </div>
+
+    <h3 data-page-node-id="DUdSMBBg6GJ6NZqsug92Q7">3.2 中原建业（09982.HK）：中期业绩由盈转亏</h3>
+    <div class="item" style="border:none; padding-top:6px;" data-page-node-id="lD5LsJRnSv3022jXsZkD7c">
+      <div class="head" data-page-node-id="aDXi5BAoYZrDgGEK9fqSLG"><span class="badge b-fin" data-page-node-id="GhNsGMZHWrHdC1uL1BKrJ9">中报</span>
+        <h4 data-page-node-id="DxdFmsURB457Y6qWhZIbtW">营收同比降 55.8%，净亏损 2600 万元，不派中期息；新签规模同比降 48.8%</h4></div>
+      <div class="body" data-page-node-id="KTfSZ95OMmjM9tPatXB3WP">
+        <ul data-page-node-id="Ur8LDzEP6M98KJeDwacRiW">
+          <li data-page-node-id="T6bhxgvylNJkXHEwdp1LbH">8 月 26 日先发布盈利警告，8 月 31 日正式披露中期业绩：营业收入 6168.3 万元（-55.8%），净亏损 2600 万元（上年同期净利 3702.5 万元）。</li>
+          <li data-page-node-id="9f0vtZ6bpBg48PoKNvDa8v">期内新签代建项目 5 个、新增合约建筑面积 37.45 万㎡（-48.8%）；在管项目合约销售金额 36.82 亿元（-32.8%）。</li>
+          <li data-page-node-id="U32AXvBtZiCVo9YSn98UD0">2025 年全年贸易应收款项 3.22 亿元、占营收 171.3%，计提减值 3534 万元、占当年净利润 68.4%——<b data-page-node-id="9XAA8fTI64GgSiZrEnzwWd">应收减值对利润侵蚀严重，中小代建商经营分化加剧</b>。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="iB6iIEJZUvjtNu8nek1YG1">来源：新浪财经（港股公告） <a href="https://cj.sina.com.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fstock%2Faigc%2Fhkgg%2F2026-08-31%2Fdoc-iniqfkks5035210.shtml" target="_blank" data-page-node-id="CVyCAw2WDyPPdodvZbKivE">finance.sina.com.cn</a></div>
+    </div>
+  </section>
+
+  <!-- ============ 四、纾困代建 / 保交楼动态 ============ -->
+  <section data-page-node-id="nEdt0B8FQfQp0gjgBiquY6">
+    <h2 data-page-node-id="sBGMLhmUWKMJyrjDME7MsM"><span class="no" data-page-node-id="bGjyYhZpYjkJv7I4c0cv3E">四</span>纾困代建 / 保交楼动态</h2>
+
+    <div class="item" data-page-node-id="5yquZFGiRnEZKI2RoNMGFX">
+      <div class="head" data-page-node-id="LKbvvd6A7c4qo0cqZs1WLi"><span class="badge b-relief" data-page-node-id="eV9FGKXSCJlE4r0fsZHFb8">复工交付</span>
+        <h4 data-page-node-id="PceQFBzrFz7R58ghqKY6jq">玉环市龙溪首府：破产清算背景下"共益债续建 + 府院联动"实现全面交付</h4></div>
+      <div class="body" data-page-node-id="nHEqXve7kVcGofOKGkVgCl">
+        <ul data-page-node-id="ezRQd76o9jH8ph0KassNAp">
+          <li data-page-node-id="A3gfQuQY9xFjjjMr9IngHr">项目 2019 年因开发商资金链断裂停工，2021 年法院受理破产清算；依托共益债优先清偿优势公开招募引入 8000 万元社会资本专项续建。</li>
+          <li data-page-node-id="isk48cONtb88eCXAE1evZr">8 月完成整体竣工验收、全面交付，数百户购房户取得交付确认单。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="NDznvPO1FWBW3LQfIhoF84">来源：平安浙江网 <a href="https://www.pazjw.gov.cn//gongchuangpingan/202608/t20260826_31871635.shtml" target="_blank" data-page-node-id="IEJ5R4KHcjbwlN4wzu53FS">www.pazjw.gov.cn</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="Ix1HFsqHBstECAL3uDpE50">
+      <div class="head" data-page-node-id="DUUQaHVFz4WQJwFzXHltoz"><span class="badge b-relief" data-page-node-id="8BEOJYcUbMxxnGvNL4g8ZA">代管模式</span>
+        <h4 data-page-node-id="LthFPm4gCRVSIvm0ekzYDh">红安恒大项目更名"武汉北青年城"：城投代管推进保交楼，2000 余户完成收房</h4></div>
+      <div class="body" data-page-node-id="sNJvZdCifX6Ztz0P30Fy1J">
+        <ul data-page-node-id="YHSO2HhFXZFENOCeIVA0yN">
+          <li data-page-node-id="uBjyjKjFtdNw4SiRbiDb9r">红安城投采用<b data-page-node-id="yT4UczhVGktDOJkIcZLEyd">代管模式</b>：未收购项目公司股权、债务主体保持不变，后续工程及物业招标仍以原开发主体名义开展——对国企代建主体而言是低风险介入路径。</li>
+          <li data-page-node-id="enqf6twoAO0QtCZ1t1fJZC">通过破产预重组等方式盘活，目前集中交付 2000 余户；同步引入文旅运营商盘活存量资产。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="rkOmubFrVAIBLbpByb9U5l">来源：楼盘网 <a href="https://m.loupan.com/huanggang/news/202608/5621737" target="_blank" data-page-node-id="OnPV56wc14DFx2hs3kU1Gc">m.loupan.com</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="GH0fTL3VZhaDLfbecl2eC8">
+      <div class="head" data-page-node-id="qT6bA7r808rWNYIN5KrD9B"><span class="badge b-relief" data-page-node-id="46o2uv8mOwNPz4b6ltA09b">破产重整</span>
+        <h4 data-page-node-id="gwL5arBVmriRzF5dLW3V2g">通辽"金辉雅居"项目复工：破产重整 + 府院联动，8 月 27 日举行复工仪式</h4></div>
+      <div class="body" data-page-node-id="IMhcnwodjLdtNst7FREhK0">
+        <ul data-page-node-id="SC0H33qmWSZOEeg5DsHu1o">
+          <li data-page-node-id="iLVsEihY42vXenDGLL0wbz">停工多年，涉及 149 名债权人申报债权 16 亿余元、192 户群众回迁安置；2026 年 6 月 22 日法院裁定批准重整计划，8 月 27 日正式复工。</li>
+          <li data-page-node-id="dGn65MFpXqeGj422BTV0zb">同周另有宜良县法院通过府院联动盘活 6 个项目共 3081 套住房，交付完成率 100%，激活沉睡资产约 5 亿元。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="lh6hH0W3HIYwV2y3CGdEiv">来源：通辽中院 <a href="http://tlzy.nmgfy.gov.cn/article/detail/2026/08/id/9473368.shtml" target="_blank" data-page-node-id="VvbnaRtLnqdgOn9SqDlje7">tlzy.nmgfy.gov.cn</a> ｜ 云南法治网 <a href="https://www.ynfzb.cn/PolLawWorks/FaYu/202608546244.shtml" target="_blank" data-page-node-id="5FoPGwnK9hMULbCqrH6DPU">www.ynfzb.cn</a></div>
+    </div>
+  </section>
+
+  <!-- ============ 五、行业榜单与研究报告 ============ -->
+  <section data-page-node-id="pTmbfU1QmYonizupsBTLY6">
+    <h2 data-page-node-id="SZ0eYELo77vOutXTdYkmsi"><span class="no" data-page-node-id="oro7uCkP1cl3aIDu3Za32C">五</span>行业榜单与研究报告</h2>
+
+    <div class="item" data-page-node-id="maCi2fsCidXN4mAMclImUq">
+      <div class="head" data-page-node-id="criNnogPdXJVO0sxmn6p1w"><span class="badge b-rank" data-page-node-id="2i3DaO34CaPOc5GQT9GcBp">榜单</span>
+        <h4 data-page-node-id="I6itfMoV2FF0XaIeSAiO3J">2026 中国房地产代建企业品牌影响力 TOP10 发布（8 月 22 日·北京）</h4></div>
+      <div class="body" data-page-node-id="j671kGNYP879tbSw6GTX18">
+        <p data-page-node-id="Yov2eHBtbFpCRKdTPKfMrR">由中国房地产报社主办"2026 第十六届中国房地产品牌发展大会"发布，TOP10 企业：</p>
+        <table data-page-node-id="IuEVLXhPzhvAXtVcnO1Tos">
+          <tr data-page-node-id="RgWeQv6Z8Y0fWW5okJQK1c"><th data-page-node-id="Y0Kx2mF1g9NfIJgjdRBHhm">排名梯队</th><th data-page-node-id="U7BsUKs4Zj6uXrVzyhoT2S">企业</th><th data-page-node-id="2s3qwTBbq9s9QELmoBga3c">亮点</th></tr>
+          <tr data-page-node-id="vUAKP17jwH0Rd5VnHyxra5"><td data-page-node-id="VmnXlutqJdY1B8eJWA2wdq">榜首</td><td data-page-node-id="uebsZvWASXvfEOs3QP3EAl">绿城管理</td><td data-page-node-id="kSiXAKebyDAsl4dtGWj3Pu">上半年新签约 1352 万㎡，龙头地位稳固</td></tr>
+          <tr data-page-node-id="5fFQNnAlus8NeDgHZmB5TD"><td data-page-node-id="Fx1bS2DSXWYlTqAbr3lNNI">二三位</td><td data-page-node-id="3kV6sT31WMAPE0zF558F7b">金地管理 / 旭辉建管</td><td data-page-node-id="QsVgSvCp7aDbDrP89n0jhU">深耕高能级城市，拓展势头强劲</td></tr>
+          <tr data-page-node-id="9yeiETpsLgwUD8r2LJ4Axy"><td data-page-node-id="rgmtqpVFfEK8hPg0BXsUcg">第一梯队</td><td data-page-node-id="RJB70HlSDBXB4hkPED0IpM">龙湖龙智造</td><td data-page-node-id="DHcgLvqSrLC2ARhrhm3lHc">产品创新与高效运营</td></tr>
+          <tr data-page-node-id="q8VpMcXOQdNa9afGU5sSMC"><td data-page-node-id="X3skSJLwVZF3xMVEH6dYKQ">快速崛起</td><td data-page-node-id="esDBbYyGcD2YNfy8CG8zve">蓝绿双城</td><td data-page-node-id="Aq913zarpAkRy0f4bZlTyO">与地方政府共建模式，政府代建发力</td></tr>
+          <tr data-page-node-id="VoOnLFzuOzMRD4TcEDPYw3"><td data-page-node-id="VYhzzhzMOiIP1jufzr3TqT">上榜</td><td data-page-node-id="AMB86Y3yM8MO5LFJapUpyr">招商建管 / 建发更新建管 / 蓝城集团 / 华发建管 / <b data-page-node-id="TPlbdJzRXd33CRvEzig3hx">中国铁建地产</b></td><td data-page-node-id="uFdOugRitEYAnrSimy2rwj">"以重带轻"、城市更新+代建、品牌+管理输出等差异化路径</td></tr>
+        </table>
+        <p style="margin-top:6px;" data-page-node-id="Q3BI2DdUujMpxXLRSG393w">行业背景：2026 上半年 TOP20 企业新签约约 10881 万㎡，同比下降 1%，<b data-page-node-id="W6uY4NMVwAH2SAEM9KwhKX">为过去五年首次负增长</b>；16 家房地产央企中已有 12 家开展代建业务。</p>
+      </div>
+      <div class="src" data-page-node-id="Mx38fDudncs1HrgnzQnbjl">来源：雪球（转中国房地产报社） <a href="https://xueqiu.com/6678388456/407356543" target="_blank" data-page-node-id="Q6LHsxhhb7vCMr3w3KY9QZ">xueqiu.com</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="j14FmI63VKSbVkdJMMME5x">
+      <div class="head" data-page-node-id="qRs2FMTiXGISt3zehKPeXm"><span class="badge b-rank" data-page-node-id="lNriP5vBkAMwZt6maeO2TS">研究</span>
+        <h4 data-page-node-id="AwscsFvQilGcWW68XnhXG6">中指研究院：《从地方国企拿地看各大城市群代建机遇》（8 月 17 日）</h4></div>
+      <div class="body" data-page-node-id="nQwi3QfZQco7ED3CKSeter">
+        <ul data-page-node-id="iTIbaB2ifOmvCH04UCgF9S">
+          <li data-page-node-id="vCytE8rAH3Bw7e03rlZr4u">长三角、粤港澳、成渝城市群地方国企拿地占比均超 50%；高国企拿地占比、高未开工率与专业开发能力不足并存，构成商业代建最大结构性机遇。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="LMqbAmWhzD5dj7l3soSHzP">来源：同花顺投顾平台（中指研究院） <a href="https://t.10jqka.com.cn/pid_677873731.shtml" target="_blank" data-page-node-id="C5m4DPmjsu65EiLaEsAYNI">t.10jqka.com.cn</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="FLyxj1i3R8awyqhAmHgZbH">
+      <div class="head" data-page-node-id="oLtUPJnAzAbJM9BoWVEDQz"><span class="badge b-rank" data-page-node-id="wKzp6aSIrEjOCvuGmnWF6S">研究</span>
+        <h4 data-page-node-id="ITIoEfZASQZZDgEUcDslwX">新浪财经：《从单一管理费到资产增值分成，代建企业盈利模式"基因突变"》（8 月 24 日）</h4></div>
+      <div class="body" data-page-node-id="HgfIL8tAg6EKIPKK71OJ6D">
+        <ul data-page-node-id="iyOqUyJbhTxkG6zNxSlpVe">
+          <li data-page-node-id="zWimRcOdnPYIsETWr3GrtK">行业动向：头部企业普遍从单一管理费向资产增值分成、小股操盘、产业链延伸（代销、装修、物业、租赁运营）转型；商业综合体、产业园、城更、不良资产盘活成为差异化赛道。</li>
+          <li data-page-node-id="tNew4ak4XZTrklF74p8tIA">数据：旭辉建管上半年新增在管项目 42 个、累计超 310 个、4900 万㎡；金地管理住宅累计签约货值超 4172 亿、政府代建规模超 1468 万㎡。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="1kf8hydHoA1GxbPLKjr2HO">来源：新浪财经 <a href="https://finance.sina.com.cn/wm/2026-08-24/doc-inipnuhu9646646.shtml" target="_blank" data-page-node-id="LxN81w0liY0FkUWLC82kqX">finance.sina.com.cn</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="zVIlBqZoCSBnrVKE9ftEKi">
+      <div class="head" data-page-node-id="8EA8ipLAEK0d6EiS7nML2x"><span class="badge b-rank" data-page-node-id="DgckjGHvTxDAnxo3DLdTDz">政策配套</span>
+        <h4 data-page-node-id="fmj1cnd5FkDnDHfsanqsgC">房地产金融与制度环境（中指第 35 周监测，8 月 31 日）</h4></div>
+      <div class="body" data-page-node-id="VyEP32LERYpnmirBNxBLcr">
+        <ul data-page-node-id="f9Xeq5nSnaQ0tfyVQEdu8U">
+          <li data-page-node-id="MgrbjBOLEYJxiP03flTNg2">住建部、自然资源部、金融监管总局联合印发《关于完善商品住房销售制度的通知》；央行、金融监管总局改革完善房地产信贷管理，个人住房贷款期限最长延至 40 年。</li>
+          <li data-page-node-id="Xq0hUHZLDxkQMTZsqCpXJl">金融监管总局、住建部联合印发《城市更新项目贷款管理办法（试行）》；证监会发布意见支持房企再融资、并购重组与 REITs 发行。</li>
+        </ul>
+      </div>
+      <div class="src" data-page-node-id="IJ8pBXdzGQ1CC9dMG0STUX">来源：中指研究院（网易转载） <a href="https://www.163.com/dy/article/L5L458Q705159A0N.html" target="_blank" data-page-node-id="rFGFQPDBB2zAwcFoclSVjs">www.163.com</a></div>
+    </div>
+  </section>
+
+  <!-- ============ 六、行业组织成果 ============ -->
+  <section data-page-node-id="vlpwSyxCDu0heIv5gZIOwX">
+    <h2 data-page-node-id="5ZoIKDFLUfyRliWoMtHwfS"><span class="no" data-page-node-id="hnPFpLXEAywXQAJ2Y5i1CQ">六</span>行业组织成果</h2>
+    <p class="lead" data-page-node-id="Vz1QpPydtAlJP0AGSOHl7r">本周无重大更新。</p>
+    <div class="notice" data-page-node-id="WuSwrPQwn0GIbTPKDjwAt2">近期已录成果（往期）：中国房协代建分会于 2026 年 7 月海南"房地产代建高质量发展大会"发布首批代建企业综合能力星级评价、启动《代建项目典型案例集（第二辑）》征集；绿城管理发布"代建 5.0"全场景价值服务体系。本周 8 月 22 日品牌大会属中国房地产报社主办，相关榜单已录入"五、行业榜单与研究报告"。</div>
+  </section>
+
+  <!-- ============ 七、头部代建公司动态 ============ -->
+  <section data-page-node-id="sCUC7cwlj8dmjhTVCi73sB">
+    <h2 data-page-node-id="hEOhjMDqkVedy62D9iXKwo"><span class="no" data-page-node-id="DnCfAVfRLgRjIVjdjCNxki">七</span>头部代建公司动态</h2>
+
+    <div class="item" data-page-node-id="HUca0dVfRoGeSz4mbNazyv">
+      <div class="head" data-page-node-id="nmIcAvRi7UStvnKWoVfoWU"><span class="badge b-co" data-page-node-id="jWvfWeCHHB2v37KYx71JND">绿城管理</span>
+        <h4 data-page-node-id="TwA9XFmde7Rt2G3OYaCBXi">中报业绩会：新拓质量优先，主动舍弃低质高风险项目；海外事业部推进"一带一路"及华人市场</h4></div>
+      <div class="body" data-page-node-id="HsWjgJ4dFfXgwWc7Iw7uXr">管理层明确"合约面积不等于未来收入"，内部考核转向开工转化率、回款达成率；待开发面积占比 44.7% 提示开工节奏风险。</div>
+      <div class="src">来源：证券日报网（8/26 业绩发布会报道） <a href="http://www.zqrb.cn/gscy/gongsi/2026-08-26/A1787735753028.html" target="_blank">www.zqrb.cn</a> ｜ 观点直击 <a href="https://new.qq.com/rain/a/20260827A0497K00?refer=cp_1009" target="_blank">new.qq.com</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="lfNK2HbPjbSMCsUVh1tmlF">
+      <div class="head" data-page-node-id="nq7zZvMrKXotfPTG2URIAS"><span class="badge b-co" data-page-node-id="rPNKdyMvYTvR0bwUCfgJMY">旭辉建管</span>
+        <h4 data-page-node-id="yPtso8gt7cIaB1Y2Kp22OG">上半年新增在管项目 42 个，累计在管 310+ 项目、4900 万㎡，覆盖 90 城</h4></div>
+      <div class="body" data-page-node-id="5aJfray2EWXOROMTa2LnQF">国资及政府代建占比约 55%，复委项目占比约 21%，业务结构多元化。</div>
+      <div class="src">来源：观点网（头部代建企业新拓分析） <a href="https://news.qq.com/rain/a/20260708A00GB500" target="_blank">news.qq.com</a> ｜ 羊城晚报 <a href="https://ep.ycwb.com/epaper/xkb/html/2026-07/10/content_1516_758562.htm" target="_blank">ep.ycwb.com</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="kGwqlwUXoU2qkLToUfxL6u">
+      <div class="head" data-page-node-id="jojFZS1Q1W8kTl1aSP1y6F"><span class="badge b-co" data-page-node-id="VFZ1law2uhAA6ccIJ49aG8">金地管理</span>
+        <h4 data-page-node-id="xeJEm91fpuCTENoSxj6IiZ">住宅 / 商办 / 政府三大赛道协同：住宅累计签约货值超 4172 亿，政府代建超 1468 万㎡</h4></div>
+      <div class="body" data-page-node-id="5Y7fCwa6R26OaeRaa1uAMX">"价值代建"倡导者，多业态对冲周期波动。</div>
+      <div class="src">来源：金地管理官网（截至 2026 年 6 月底经营数据） <a href="https://www.gemdaleca.com/news/info/768.html" target="_blank">www.gemdaleca.com</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="ctQfpZDqvUz1QPmBrq2z01">
+      <div class="head" data-page-node-id="rxMPsEx3ApoKlyLR8oKcfM"><span class="badge b-co" data-page-node-id="N90RkpOBBKbCR8DMtONTuF">新城控股</span>
+        <h4 data-page-node-id="rH3lPPyIzXTP2aT6ByLv0F">聚焦商业综合体代建，拟以"小股操盘"参与分享股权增值收益</h4></div>
+      <div class="body" data-page-node-id="IpsHsSzUHXD95vxAQrE3A4">瞄准政府平台公司、城投持地但开发运营能力不足的需求；收益模式从管理费延伸至价值分成。</div>
+      <div class="src">来源：乐居财经（王晓松 5/26 股东大会发言） <a href="https://www.163.com/dy/article/KTU8573O0552NVEU.html" target="_blank">www.163.com</a></div>
+    </div>
+
+    <div class="item" data-page-node-id="eNc5pajuhSRq0shFtBRjSU">
+      <div class="head" data-page-node-id="WigLECBLINHxFmdB4yByk2"><span class="badge b-co" data-page-node-id="wWTzQwOjAkBJFuuhBLgmEk">蓝绿双城</span>
+        <h4 data-page-node-id="R6W1OqeccVxBP8gcQNnGn3">政府代建快速崛起：与地方政府共建模式，上半年政府代建新拓面积并列第三</h4></div>
+      <div class="body" data-page-node-id="yBY9MeubyDeCf5Frp1RBzz">同期位列代建销售榜第二（126.7 亿元）。</div>
+      <div class="src">来源：中指研究院《2026 上半年中国房地产代建企业排行榜》 <a href="https://www.163.com/dy/article/L168LREU05159A0N.html" target="_blank">www.163.com</a></div>
+    </div>
+  </section>
+
+  <!-- ============ 八、法务视角要点提示 ============ -->
+  <section data-page-node-id="AVynStJkqlYMhJ7UdK9o8L">
+    <h2 data-page-node-id="3tRQdWFFDtyR31NYcWHHdK"><span class="no" data-page-node-id="VM7Ab0pxMcBaGaBPF3PAs9">八</span>法务视角要点提示</h2>
+    <ol class="points" data-page-node-id="d5MBRBMcRX4yZRle8d4I32">
+      <li data-page-node-id="oZnMjRAPEeHfaB5gheek8A"><span class="cat" data-page-node-id="dUPdAqqyYQHogApSOScr9o">合同审查</span><b data-page-node-id="e1XYPfvSFi5yV0pba6Tjb9">地方代建制度进入密集更新期，合同条款对标依据正在刷新。</b>本周 5 份地方文件出台/征求意见，各地在代建费支付节点（如漳州：竣工前≤80%、结算后 15%、缺陷责任期满结清）、代建单位禁止承揽施工/供材、业主单方终止与规模工期调整权、项目经理变更报备等方面呈现趋同化精细化趋势——审查代建合同时应逐项比对委托方所在地最新办法。</li>
+      <li data-page-node-id="AdCzRODAbTMueeqhNibNmE"><span class="cat" data-page-node-id="NoYb3hGdfLFCQYFX9HIeLG">风险防控</span><b data-page-node-id="sjZqYi8ZlBnYZCSyLPnNcs">回款风险从应收端向合同资产端迁移。</b>绿城管理中报显示合同资产 17.54 亿元、广义应收类占营收超 187%，且合同资产与验收、里程碑、竣工备案等履约条件挂钩。合同层面应关注：里程碑节点界定是否客观可验证、付款义务与节点条件是否匹配、委托方停工/延期/终止情形下已履约部分的结算与追偿路径。</li>
+      <li data-page-node-id="djuJzltFG2BKctNhrHucZ6"><span class="cat" data-page-node-id="JHkrMeWTcvqCH9dbM0cQ2P">风险防控</span><b data-page-node-id="mb8pQwDDjdGoa8sC3iBqxq">合同资产减值计提正在常态化。</b>绿城管理自 2024 年起对合同资产计提减值（现拨备 1.07 亿）。为自身代建业务预留减值预期、在合同中强化委托方信用支持（如付款担保、履约保证金安排）值得纳入风控清单。</li>
+      <li data-page-node-id="2JaONdtTauE4XiviE605ju"><span class="cat" data-page-node-id="k4JWPEgpwinPLEgBxSELYA">交易对手</span><b data-page-node-id="Xf3J4rhfaW4PaOrUO74KBs">中小代建商经营分化加剧。</b>中原建业由盈转亏、2025 年应收减值占净利润 68.4%。在"代建企业作为交易对手"或"合作代建"场景下，建议对合作方的应收账款/减值/回款数据作专项尽调。</li>
+      <li data-page-node-id="dfWpUKgKnQdgmnnyPUBCh2"><span class="cat" data-page-node-id="YfPi3x39ihKLk519hWtdHM">纾困结构</span><b data-page-node-id="TE85hFebWnTcWNH52SWHTy">纾困代建模式图谱丰富，凤樾府类结构可对照参考。</b>本周出现"共益债续建"（玉环，依托共益债优先清偿）、"城投代管"（红安，不收购股权、债务主体不变）、"破产重整"（通辽）三种典型路径——其中红安"代管模式"对国企代建主体介入低风险项目具有直接参考意义，信托/AMC 持股 + 代建公司的权责分配可与之互证。</li>
+      <li data-page-node-id="Hcmy77m1IHCI2P686QJA6X"><span class="cat" data-page-node-id="Pt5IgrXLnz2877QOdRVbn4">收益模式</span><b data-page-node-id="3VCDCVjH70CHcv8xgf2eRk">盈利模式从单一管理费向增值分成、小股操盘演进，合同架构需同步更新。</b>涉及收益分成条款时需明确：分成基数（销售回款/资产增值）、触发条件、审计权、退出机制及小股操盘下的股东权利边界。</li>
+      <li data-page-node-id="ztFeme1yX4z4oHq8FxB9DT"><span class="cat" data-page-node-id="muU6obQMwSUdZkKYzBXNBE">监管动向</span><b data-page-node-id="gU0wL0vH9Cym11M81AbIDS">融资端利好城市更新与纾困代建。</b>《城市更新项目贷款管理办法（试行）》印发、房企再融资与 REITs 支持政策落地，将改善城更/纾困代建项目的资金闭环，相关项目的融资合规审查（贷款用途、资金封闭管理）可提前储备要点。</li>
+    </ol>
+  </section>
+
+  <footer data-page-node-id="ZTPGEG2a6Mrgsn28Wn7XdB">
+    本报告由自动化任务「房地产代建业务每周周报」生成 · 首期示范版 · 信息来源均附原文链接，引用请核对原文<br data-page-node-id="198P7cg2RSXSauICeBKuQK">
+    收集方向：政策制度 / 合同文本 / 头部财报 / 纾困动态 / 榜单研究 / 行业组织 / 头部动态 / 法务要点
+  </footer>
+
+</div>
+</body>
+</html>

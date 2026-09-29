@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>房地产代建业务周报 · 2026-09-14</title>
+<style>
+  :root{
+    --bg:#f4f6f8; --card:#ffffff; --ink:#1f2937; --sub:#6b7280;
+    --primary:#1e3a5f; --accent:#b91c1c; --line:#e5e7eb; --soft:#eef2f6;
+    --tag-a:#1e3a5f; --tag-b:#0f766e; --tag-c:#b45309;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.7; font-size:15px;}
+  .wrap{max-width:980px; margin:0 auto; padding:28px 20px 60px;}
+
+  /* 头部 */
+  .hero{background:linear-gradient(135deg,#16283f 0%,#1e3a5f 60%,#2c5282 100%); color:#fff; border-radius:14px; padding:34px 36px; box-shadow:0 4px 18px rgba(30,58,95,.18);}
+  .hero .kicker{font-size:13px; letter-spacing:2px; color:#9fb6d0; margin-bottom:8px;}
+  .hero h1{font-size:28px; font-weight:700; letter-spacing:1px;}
+  .hero .sub{margin-top:6px; font-size:15px; color:#d3dde8;}
+  .hero .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px;}
+  .hero .meta span{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.18); border-radius:20px; padding:4px 14px; font-size:12.5px; color:#e8eef5;}
+
+  /* 概览 */
+  .overview{margin-top:22px; display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:12px;}
+  .ov-card{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--primary); border-radius:10px; padding:14px 16px;}
+  .ov-card .n{font-size:22px; font-weight:700; color:var(--primary);}
+  .ov-card .t{font-size:12.5px; color:var(--sub); margin-top:2px;}
+
+  section{margin-top:26px; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px 28px;}
+  section h2{font-size:19px; font-weight:700; color:var(--primary); display:flex; align-items:baseline; gap:10px; padding-bottom:12px; border-bottom:2px solid var(--soft);}
+  section h2 .no{background:var(--primary); color:#fff; font-size:13px; border-radius:6px; padding:2px 9px; flex-shrink:0;}
+  section h3{font-size:15.5px; font-weight:600; margin:20px 0 6px; color:var(--ink);}
+  .lead{font-size:13px; color:var(--sub); margin:10px 0 4px;}
+
+  /* 条目 */
+  .item{padding:14px 0; border-bottom:1px dashed var(--line);}
+  .item:last-child{border-bottom:none;}
+  .item .head{display:flex; align-items:flex-start; gap:8px;}
+  .item .badge{flex-shrink:0; margin-top:3px; font-size:11.5px; border-radius:4px; padding:1px 8px; color:#fff; font-weight:500;}
+  .b-policy{background:var(--tag-a);} .b-contract{background:#374151;} .b-fin{background:var(--tag-b);} .b-relief{background:var(--accent);} .b-rank{background:var(--tag-c);} .b-org{background:#7c3aed;} .b-co{background:#0e7490;}
+  .item h4{font-size:15px; font-weight:600; line-height:1.5;}
+  .item .src{font-size:12px; color:var(--sub); margin-top:4px;}
+  .item .src a{color:var(--primary); text-decoration:none; border-bottom:1px dotted #9fb0c5;}
+  .item .src a:hover{color:var(--accent);}
+  .item .body{margin-top:6px; font-size:14px; color:#374151;}
+  .item ul{margin:6px 0 0 20px;}
+  .item li{margin-top:3px;}
+
+  /* 表格 */
+  table{width:100%; border-collapse:collapse; margin-top:10px; font-size:13.5px;}
+  th{background:var(--soft); color:var(--primary); font-weight:600; text-align:left; padding:8px 12px; border:1px solid var(--line); white-space:nowrap;}
+  td{padding:8px 12px; border:1px solid var(--line); vertical-align:top;}
+  tr:nth-child(even) td{background:#fafbfc;}
+  .num{font-variant-numeric:tabular-nums; font-weight:600;}
+  .down{color:var(--accent);} .up{color:#0f766e;}
+
+  /* 提示框 */
+  .notice{background:var(--soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:12px 16px; margin-top:14px; font-size:13.5px; color:#374151;}
+  .notice b{color:var(--accent);}
+
+  /* 要点 */
+  .points{counter-reset:pt; list-style:none;}
+  .points li{counter-increment:pt; position:relative; padding:12px 0 12px 44px; border-bottom:1px dashed var(--line);}
+  .points li:last-child{border-bottom:none;}
+  .points li::before{content:counter(pt); position:absolute; left:0; top:12px; width:28px; height:28px; background:var(--primary); color:#fff; border-radius:50%; font-size:13px; font-weight:600; display:flex; align-items:center; justify-content:center;}
+  .points .cat{display:inline-block; font-size:11.5px; background:#eef2f6; color:var(--primary); border:1px solid #d7e0ea; border-radius:4px; padding:0 7px; margin-right:6px;}
+
+  footer{margin-top:26px; text-align:center; font-size:12px; color:#9ca3af;}
+  @media (max-width:640px){ .wrap{padding:14px 12px 40px;} .hero{padding:24px 20px;} section{padding:18px 16px;} th,td{padding:6px 8px;} }
+  @media print{ body{background:#fff;} .wrap{max-width:100%;} .hero{box-shadow:none;} section{page-break-inside:avoid;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ 头部 ============ -->
+  <div class="hero">
+    <div class="kicker">CHINA REAL ESTATE AGENCY CONSTRUCTION WEEKLY</div>
+    <h1>房地产代建业务周报</h1>
+    <div class="sub">政策制度 · 合同文本 · 头部财报 · 纾困动态 · 榜单研究 · 行业组织 · 头部动态</div>
+    <div class="meta">
+      <span>第 3 期</span>
+      <span>收集窗口：2026-09-07 至 2026-09-13</span>
+      <span>生成时间：2026-09-14</span>
+      <span>适用：法务 · 合规风控视角</span>
+    </div>
+  </div>
+
+  <!-- ============ 本周概览 ============ -->
+  <div class="overview">
+    <div class="ov-card"><div class="n">4 份</div><div class="t">地方代建 / 城市更新制度文件出台或征求意见</div></div>
+    <div class="ov-card"><div class="n">2 项</div><div class="t">代建及建设工程招标示范文本更新</div></div>
+    <div class="ov-card"><div class="n">4 家</div><div class="t">头部及 AMC 系代建平台财报 / 机构点评</div></div>
+    <div class="ov-card"><div class="n">3 项</div><div class="t">纾困代建与保交楼进展（含"三代协议"司法规则）</div></div>
+    <div class="ov-card"><div class="n">5 份</div><div class="t">行业榜单与研究报告</div></div>
+    <div class="ov-card"><div class="n">6 起</div><div class="t">头部代建企业新签 / 中标 / 开工动态</div></div>
+  </div>
+
+  <!-- ============ 一、政策与制度文件 ============ -->
+  <section>
+    <h2><span class="no">一</span>政策与制度文件</h2>
+    <p class="lead">本周地方代建与城市更新制度延续密集更新：1 份正式印发（含政策解读）、2 份公开征求意见、1 份省级城市更新专项规划公开；代建管理向"全流程闭环 + 代建费总额上限"方向收紧。</p>
+
+    <div class="item">
+      <div class="head"><span class="badge b-policy">印发</span>
+        <h4>郑州航空港经济综合实验区印发《政府投资项目委托代建管理办法》（2026 年 9 月 1 日生效）</h4></div>
+      <div class="body">
+        <ul>
+          <li>9 月 1 日印发并生效，9 月 11 日官网公开全文及政策解读；同时废止郑港〔2025〕2 号。</li>
+          <li>适用范围：使用区级预算安排资金且总投资 <b>3000 万元及以上</b>的区本级非经营性固定资产投资项目。</li>
+          <li>主体架构清晰三分：<b>委托单位</b>（管委会授权、履行发包人职责，按项目类型划分至建设服务中心、建设局、交通枢纽局、生态环境和城市管理局、属地乡镇）、<b>代建单位</b>（招标选定的专业化项目管理单位）、<b>使用单位</b>（用地权属人和预算申报列支单位）。</li>
+          <li>关键条款：覆盖立项至缺陷责任期结束全流程；从严管控设计、工程变更、合同履约、资金拨付；<b>代建管理费实行差额累进、总额上限管控</b>；设置项目奖励、违约追责、失信惩戒机制。</li>
+          <li>新旧衔接：已签订代建合同的存量项目可按原合同继续执行，上位法规政策有新规定的从其规定。</li>
+        </ul>
+      </div>
+      <div class="src">来源：郑州航空港经济综合实验区管理委员会官网 <a href="https://www.zzhkgq.gov.cn/2026/09-11/3659603.html" target="_blank">www.zzhkgq.gov.cn（办法全文）</a> ｜ 政策解读 <a href="https://www.zzhkgq.gov.cn/2026/09-11/3659617.html" target="_blank">www.zzhkgq.gov.cn（解读）</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-policy">印发</span>
+        <h4>安徽省住建厅印发《安徽省城市更新"十五五"规划》（皖建城〔2026〕61 号，9 月 7 日公开）</h4></div>
+      <div class="body">
+        <ul>
+          <li>9 月 7 日生成并公开，9 月 8 日对外发布；共 4 个部分 11 章、33 项重点任务，设 10 个工程专栏，划定 <b>251 个城市更新片区</b>（其中 60 个列为重点建设对象）。</li>
+          <li>量化指标（对代建业务形成明确项目池）：新开工改造城镇老旧小区 <b>1900 个</b>、实施 <b>100 个</b>完整社区建设、改造危旧房和城中村 <b>5 万户</b>（力争区域城乡老旧房屋 60 万户以上）、城镇危旧房改造项目不少于 <b>140 个</b>、改造老旧街区 / 老旧厂区各 20 个以上。</li>
+          <li>制度配套：盘活城市存量资源、加大批而未供与闲置土地处置力度、探索房地产发展新模式、推进老旧街区与产业园区转型升级；智能建造方向打造不少于 100 个试点项目、培育 20 个以上产业基地。</li>
+          <li>法务关注：规划明确"加快构建房地产发展新模式"，为轻资产代建、代管、片区综合开发提供制度接口。</li>
+        </ul>
+      </div>
+      <div class="src">来源：安徽省住房和城乡建设厅 <a href="https://dohurd.ah.gov.cn/public/6991/58351621.html" target="_blank">dohurd.ah.gov.cn</a> ｜ 安徽省人民政府 <a href="https://www.ah.gov.cn/zwyw/jryw/565540391.html" target="_blank">www.ah.gov.cn</a> ｜ 人民网安徽频道 <a href="https://ah.people.com.cn/BIG5/n2/2026/0909/c358428-41690699.html" target="_blank">ah.people.com.cn</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-policy">征求意见</span>
+        <h4>深圳市龙华区《政府投资项目代建制管理办法（征求意见稿）》公开（9 月 11 日）</h4></div>
+      <div class="body">
+        <ul>
+          <li>明确代建制定义：区政府投资项目的建设管理单位（委托单位）通过公开招标等方式，选择社会专业化管理单位（代建单位），按合同约定履行政府投资项目建设管理职责，项目建成后交付政府资产管理单位。</li>
+          <li>起草依据为深化供给侧结构性改革、提高政府投资项目建设管理水平和投资效益；为一线城市核心区层面代建制度的代表性文本，后续可跟踪其正式稿的委托方式、代建费计取与考核评价条款。</li>
+        </ul>
+      </div>
+      <div class="src">来源：城市更新网（转载龙华区征求意见稿全文） <a href="https://www.chengshigengxin.com/index.php?g=Wap&a=shows&catid=42&id=4435" target="_blank">www.chengshigengxin.com</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-policy">征求意见</span>
+        <h4>察雅县《政府投资项目建设实施管理办法（征求意见稿）》公示（9 月 10 日至 10 月 10 日）</h4></div>
+      <div class="body">
+        <ul>
+          <li>共十章三十三条，覆盖项目前期储备与立项决策、勘察设计与概算刚性管控、招投标与开工前置管理、施工全过程管理、竣工验收决算审计与资产移交、监督监管与追责问责等十个部分。</li>
+          <li>直接涉及代建：规范招投标、开工条件、<b>代建制管理</b>；强化投资"三控红线"；明确设计变更签证、资金拨付管控；对援藏项目、EPC 总承包项目、乡镇小型项目作出专项规定。</li>
+          <li>县域层面将代建纳入政府投资项目全流程闭环管理，是"县域代建制度化"的典型样本。</li>
+        </ul>
+      </div>
+      <div class="src">来源：察雅县人民政府官网 <a href="https://chaya.changdu.gov.cn/cyxrmzf/c101988/202609/a7f311cc523d4804a91c348c9099bd98.shtml" target="_blank">chaya.changdu.gov.cn</a></div>
+    </div>
+
+    <div class="notice"><b>配套跟踪：</b>新华网 9 月 8 日专题报道江苏以模式创新盘活存量资产、营造高品质城市生活空间（常州武进新安村片区"城中村+"综合改一次、戚墅堰工房片区文脉延续），为《城市更新"十五五"规划》落地的地方实践样本；同期人民网 9 月 14 日综述指出城市更新"全生命周期政策体系"正加速形成，资金端 2026 年中央预算内城市更新专项 970 亿元、超长期特别国债 1600 亿元支持地下管网，配合《城市更新项目贷款管理办法（试行）》与证监会 8 月 28 日 REITs 支持意见，形成"投融管退"闭环。</div>
+  </section>
+
+  <!-- ============ 二、合同示范文本 ============ -->
+  <section>
+    <h2><span class="no">二</span>合同示范文本</h2>
+    <p class="lead">本周 2 项招标文件范本成果落地，其中湖南为代建专项范本，与代建项目招标合规直接相关。</p>
+
+    <div class="item">
+      <div class="head"><span class="badge b-contract">代建范本</span>
+        <h4>湖南省："机器管招投标"交易系统上线代建范本，原工程建设项目招投标交易系统全面停用</h4></div>
+      <div class="body">
+        <ul>
+          <li>湖南省公共资源交易中心 9 月 2 日发布通知，衡阳市人民政府门户 9 月 10 日转发。依据《湖南省公共资源交易数字化、模块化招标文件范本框架导引及编制导则》及《湖南省政府投资项目代建单位标准招标文件（2026 年版）》。</li>
+          <li><b>时间节点：</b>自 2026 年 9 月 3 日起老系统全面停用，全省新发起、新发布招标公告的工程建设项目统一切换至"机器管招投标系统"全流程电子化交易。</li>
+          <li>过渡规则：9 月 3 日前已通过老系统挂网发布招标公告的存续项目，按原有规则、流程、范本继续完成开评标与合同签订，<b>不作回溯调整</b>；老系统中尚未挂网发布招标公告的代建项目，一律由招标人重新在"机器管招投标系统"中开展交易。</li>
+          <li>法务关注：代建项目招标文件须严格按《导则》与新版范本标准化编制；招标人须提前完成系统操作培训与业务流程适配，否则存在招标程序瑕疵风险。</li>
+        </ul>
+      </div>
+      <div class="src">来源：衡阳市人民政府门户网站（转发湖南省公共资源交易中心通知） <a href="https://www.hengyang.gov.cn/xxgk/dtxx/tzgg/gsgg/20260910/i3956739.html" target="_blank">www.hengyang.gov.cn</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-contract">招标范本</span>
+        <h4>淮北市发布 2026 年建设工程类招标文件示范文本（9 月 7 日，共 8 类）</h4></div>
+      <div class="body">
+        <ul>
+          <li>由淮北市公共资源交易监督管理局发布，依据安徽省住建厅 2025 年版房屋建筑和市政基础设施工程施工招标文件示范文本、安徽省水利水电工程施工招标文件示范文本（2025 年版）等制定。</li>
+          <li>涵盖 8 类：施工类、工程总承包（EPC）、公路工程施工类、农业工程施工类、水利水电工程施工类、监理类、勘察设计类、货物采购类。</li>
+          <li>说明：属建设工程类通用范本，代建项目在编制工程招标文件时可参照其条款结构；代建专项范本仍以湖南 2026 年版为本周唯一新增。</li>
+        </ul>
+      </div>
+      <div class="src">来源：淮北市公共资源交易中心 <a href="https://ggzy.huaibei.gov.cn/jyfw/003010/20260908/1a9cc4d0-52bb-4cb6-bad5-f8eaa23eb4e6.html" target="_blank">ggzy.huaibei.gov.cn</a></div>
+    </div>
+  </section>
+
+  <!-- ============ 三、头部公司财报与公告 ============ -->
+  <section>
+    <h2><span class="no">三</span>头部公司财报与公告</h2>
+
+    <h3>3.1 绿城管理（09979.HK）：中报后券商研报重申"买入"，应收/合同资产与派息指标再受关注</h3>
+    <div class="item" style="border:none; padding-top:6px;">
+      <div class="head"><span class="badge b-fin">机构研报</span>
+        <h4>兴业证券 / 兴证国际 9 月 7 日发布中报点评：盈利质量持续改善，保持丰厚派息</h4></div>
+      <div class="body">
+        <table>
+          <tr><th>指标</th><th>2026H1</th><th>同比 / 变动</th><th>备注</th></tr>
+          <tr><td>营业收入</td><td class="num">14.66 亿元</td><td class="up">+7%</td><td>代建服务收入占 97.2%</td></tr>
+          <tr><td>归母净利润</td><td class="num">2.71 亿元</td><td class="up">+6%</td><td>毛利率 41.1%（+1.1pct）、归母净利率 18.5%</td></tr>
+          <tr><td>经营性现金流净额</td><td class="num">1.34 亿元</td><td class="up">+20%</td><td>连续两年同期改善</td></tr>
+          <tr><td>银行结余及现金</td><td class="num">14.02 亿元</td><td>—</td><td>无有息负债</td></tr>
+          <tr><td>新拓代建面积 / 代建费</td><td class="num">1352 万㎡ / 34.1 亿元</td><td class="down">-32.0% / -31.7%</td><td>仍居行业第一</td></tr>
+          <tr><td>新拓结构</td><td class="num">一二线占比 64.3%</td><td>—</td><td>60% 项目费率超 3%；单方代建费约 252 元/㎡；客户重复委托率升至 25%</td></tr>
+          <tr><td>委托方结构</td><td class="num">国企 39% / 民企 46% / 金融机构 14%</td><td>—</td><td>按新拓代建费口径</td></tr>
+          <tr><td>在手订单</td><td class="num">1.20 亿㎡</td><td>—</td><td>可支撑未来 3–5 年经营</td></tr>
+          <tr><td><b>合约资产（合同资产）</b></td><td class="num">17.54 亿元</td><td class="down">较 2025 年底 +13.7%</td><td>回款风险仍集中于合同资产端</td></tr>
+          <tr><td>交付</td><td class="num">56 项目 / 545.6 万㎡</td><td class="up">+17.3%</td><td>下半年预计交付 950 万㎡</td></tr>
+          <tr><td>代建销售金额 / 均价</td><td class="num">345 亿元 / 14375 元/㎡</td><td class="down">-18%</td><td>均价 +5%，项目质量提升</td></tr>
+          <tr><td>中期股息 / 派息政策</td><td class="num">0.076 元/股</td><td>持平</td><td>全年派息比例预计不低于归母净利润 80%；股息率约 11%</td></tr>
+        </table>
+        <ul style="margin-top:10px;">
+          <li><b>法务重点：</b>合同资产 17.54 亿元、较 2025 年底增长 13.7%，与验收、里程碑、竣工备案等履约条件挂钩；销管费用同比减少 7%，费用端压降是利润率维持的主要来源之一。</li>
+          <li>机构判断：房地产新政推动行业向"投资开发分离、专业分工、项目化融资"转变，利好头部品牌代建公司；风险提示为市场拓展、项目转化、回款不及预期。</li>
+        </ul>
+      </div>
+      <div class="src">来源：智通财经（兴业证券研报全文） <a href="https://www.zhitongcaijing.com/content/reportdetail/AP202609071829089999.html" target="_blank">www.zhitongcaijing.com</a> ｜ 发现报告（兴证国际研报） <a href="https://www.fxbaogao.com/detail/5676467" target="_blank">www.fxbaogao.com</a></div>
+    </div>
+
+    <h3>3.2 信达地产（600657.SH）：AMC 系代建平台中报解读——代建收入贡献仍有限</h3>
+    <div class="item" style="border:none; padding-top:6px;">
+      <div class="head"><span class="badge b-fin">中报解读</span>
+        <h4>营收 12.83 亿元（-27.85%）、归母净亏损 13.2 亿元（同比大幅减亏）；新增项目全部为代建</h4></div>
+      <div class="body">
+        <ul>
+          <li>经营现金流净额 <b>10.45 亿元</b>，同比提升 19.2%；当期回款规模高于销售签约额，系存量去化与资金回收专项行动成效。</li>
+          <li>业务结构：上半年新增获取计容建面仅 <b>3.22 万㎡，全部为代建项目</b>，不再新增自有土地储备；新开工项目中代建项目占比高达 <b>85%</b>；截至二季度末储备计容建面 336.26 万㎡，其中代建项目占比接近半数。</li>
+          <li>代建贡献度：上半年代建项目销售金额约 <b>4.15 亿元</b>，占销售总额（36.95 亿元）约 <b>11.2%</b>；房地产开发业务收入 9.14 亿元，仍占主营收入 9.88 亿元的九成以上。</li>
+          <li><b>风险提示（交易对手 / 收益模式视角）：</b>AMC 系代建项目多涉及不良资产盘活，需承担额外风险，实际利润率可能低于行业平均水平；公司定位为"项目操盘主体、投后管理抓手、不动产投资顾问"，通过债务重组、股权收购等定制盘活方案，有时不仅做代建方还会注入增量投资。</li>
+          <li>母公司约束：中国信达 2026 上半年归母净利润 7.84 亿元、同比下降 65.6%；集团核心一级资本充足率 9.04%，仅满足基础监管要求；监管明确要求 AMC 聚焦不良资产主业。</li>
+        </ul>
+      </div>
+      <div class="src">来源：中访网（今日头条，9 月 13 日） <a href="https://www.toutiao.com/article/7684815661532545565" target="_blank">www.toutiao.com</a> ｜ 腾讯搜一搜（中报观察） <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_1046aa34dd771452&amp;faker=1" target="_blank">so.html5.qq.com</a> ｜ 今日头条（9 月 4 日，市值与代建规模对比） <a href="https://www.toutiao.com/article/7681539427335799359" target="_blank">www.toutiao.com</a></div>
+    </div>
+
+    <h3>3.3 中国信达：破产重整市占率首次公开（超 25%）</h3>
+    <div class="item" style="border:none; padding-top:6px;">
+      <div class="head"><span class="badge b-fin">AMC 动态</span>
+        <h4>总裁宋卫刚：2022 年以来参与 11 家上市公司破产重整，市场占有率超 25%</h4></div>
+      <div class="body">
+        <ul>
+          <li>系五大 AMC 在破产重整市场份额的首次公开披露；信达曾发起设立中央金融企业第一支破产投资工具——中国信达危困企业投资基金。</li>
+          <li>同类对比：中信金融资产 2025 年破产重整业务纳入存量纾困盘活板块，全年投放 923 亿元。</li>
+          <li>对代建业务的含义：AMC 是纾困代建最主要的资金方与项目来源方之一，其份额格局与资金投放节奏直接决定纾困代建订单的可得性。</li>
+        </ul>
+      </div>
+      <div class="src">来源：新浪财经（不良资产头条，9 月 11 日） <a href="https://finance.sina.com.cn/cj/2026-09-11/doc-inirmrtz5354168.shtml" target="_blank">finance.sina.com.cn</a></div>
+    </div>
+
+    <div class="notice"><b>跟踪提示：</b>中原建业（09982.HK）本周<b>无新增公告或定期报告</b>（其中期报告已于 9 月 4 日披露、上期周报已录）。持续跟踪要点：董事会主席及提名委员会主席自 9 月 1 日起空缺，未符合港交所《上市规则》第 3.27A 条，治理合规缺口尚未补齐；公司规划的 3 亿港元困境代建资金池（含 5000 万港元离岸困境资产基金）截至 9 月上旬尚无实质签约项目落地，承诺落地时点为 2027 年 6 月 30 日。</div>
+  </section>
+
+  <!-- ============ 四、纾困代建 / 保交楼动态 ============ -->
+  <section>
+    <h2><span class="no">四</span>纾困代建 / 保交楼动态</h2>
+
+    <div class="item">
+      <div class="head"><span class="badge b-relief">司法规则</span>
+        <h4>最高法 137 号纪要"三代协议"（代建 / 代管 / 代持）破产豁免规则解读（9 月 8 日）</h4></div>
+      <div class="body">
+        <ul>
+          <li><b>核心规则：</b>破产受理前经地方政府部门协调、专为保交楼保交房签订的代建、代管、代持协议，即使房企进入破产程序——(1) 管理人不得依《企业破产法》第十八条以"双方未履行完毕合同"为由单方解除；(2) 管理人及其他债权人不得以无偿转让财产、个别清偿、恶意处置资产等条款申请撤销或认定无效；(3) 法院对该类保交楼专项协议一律不予撤销、不予否定效力。</li>
+          <li><b>三类协议定性：</b><b>代建 / 代管</b>——房企作为委托方，第三方机构接受政府协调介入，负责后续工程建设、竣工验收、房源交付、营销与日常管理，房企筹措续建资金、最终投资收益仍归房企，项目权属不发生转移；<b>代持</b>——阶段性股权托管盘活，房企将项目公司股权以极低名义价格临时过户至第三方，由受让方主导建设运营并垫付费用，销售回款优先归还第三方垫付成本与投资，满足约定条件后房企按原转让价格回购股权。</li>
+          <li><b>法务价值：</b>明确"三代"协议不属于恶意转移资产或违规处置破产财产，为纾困代建项目的效力争议定分止争，是存量烂尾项目接续盘活的直接司法背书。</li>
+        </ul>
+      </div>
+      <div class="src">来源：今日头条（类案简析·周军律师，9 月 8 日） <a href="https://www.toutiao.com/article/7683068853080900115" target="_blank">www.toutiao.com</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-relief">融资机制</span>
+        <h4>房地产融资转向"项目制"：信托与 AMC 迎资产质量修复契机（9 月 11 日）</h4></div>
+      <div class="body">
+        <ul>
+          <li>8 月 28 日央行、金融监管总局、证监会联合推出房地产融资新规，推动房企融资从集团信用转向以项目为中心的闭环体系，覆盖信贷、信托、资本市场全链条；要求资金封闭管理、项目公司直融、专户运行，允许信托投资已建成项目股权或物权，支持 AMC 协同化险。</li>
+          <li>政策核心是隔离集团风险与项目风险——只要项目资本金到位、权属清晰、现金流可覆盖，即便母公司出险仍可获得续建融资。</li>
+          <li>数据：2026 年 1—7 月房企到位资金同比降 20.3%，项目停工导致优质资产持续劣化；机制重构有望加速交付、提升销售回款，改善信托底层资产兑付能力与 AMC 回收效率。研报认为头部信托投后管理与地方协调能力更强，全国性 AMC 在跨区域重组和 REITs/ABS 退出工具上弹性更大。</li>
+        </ul>
+      </div>
+      <div class="src">来源：中财网（9 月 11 日） <a href="https://cfi.net.cn/p20260911000576.html" target="_blank">cfi.net.cn</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-relief">交付进展</span>
+        <h4>海南定安：6 个逾期楼盘 3365 套中 3118 套实际入住，入住率 92.66%（9 月 12 日）</h4></div>
+      <div class="body">
+        <ul>
+          <li>自 2023 年以来针对恒吉花园、江岸小镇、阳光椰风苑等 6 个逾期楼盘坚持"一项一策"，全链条推进风险化解。</li>
+          <li>续建资金渠道：统筹资产处置、盘活专项资金、发动业主自救、退还部分开发商缴纳的农民工工资保证金、<b>国有平台收购房源</b>。</li>
+          <li>办证攻坚：不动产登记机构依托房屋安全鉴定报告及消防、人防、规划专项验收意见，为符合条件的业主办理不动产权证——"住得上房 + 办得下证"双闭环。</li>
+        </ul>
+      </div>
+      <div class="src">来源：海南日报（今日头条，9 月 12 日） <a href="https://www.toutiao.com/article/7684455789100024363" target="_blank">www.toutiao.com</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-relief">国企收购</span>
+        <h4>四川南充蓝湾半岛（保交楼项目）：国企收购融资流程走完，待收购款打入监管账户（9 月 9 日）</h4></div>
+      <div class="body">
+        <ul>
+          <li>项目涉及总户数 2235 户，其中保交房 1363 户已完成"首登"；主体 13 幢已完成，部分楼栋公区装饰、外墙装饰完成，门窗完成约 50%。</li>
+          <li>纾困路径：一是协调开发商自筹资金；二是<b>协调国企收购融资</b>，目前已走完基本流程，待收购款打入监管账户、专款专用；三是加快后续建设施工、分批交房。</li>
+          <li>提示：本项目为"国企收购 + 监管账户专款专用"的典型安排，对代建方而言，付款节点须与监管资金释放节奏严格匹配。</li>
+        </ul>
+      </div>
+      <div class="src">来源：问政四川（高坪区小龙街道办事处回复，网易转载 9 月 9 日） <a href="https://dy.163.com/article/L6G2R55N0552KZJH.html" target="_blank">dy.163.com</a></div>
+    </div>
+  </section>
+
+  <!-- ============ 五、行业榜单与研究报告 ============ -->
+  <section>
+    <h2><span class="no">五</span>行业榜单与研究报告</h2>
+
+    <div class="item">
+      <div class="head"><span class="badge b-rank">研究报告</span>
+        <h4>克而瑞：《2026 房企中报：谁在逆势增长，谁在加速掉队？》（9 月 13 日）</h4></div>
+      <div class="body">
+        <ul>
+          <li>以保利发展、万科 A、招商蛇口、滨江集团、华润置地、中国海外发展、建发国际、绿城中国、越秀地产、中国金茂 10 家为样本，沿"财务安全→战略空间→销售表现→盈利现金流→市场定价→政策规则"传导链分析。</li>
+          <li>关键结论：8 家营收同比下滑，仅中海（+17.3%）、招商蛇口（+6.41%）正增长；华润置地核心净利润 101.6 亿元为样本中唯一破百亿，万科 A 亏损 149.5 亿元；战略执行主线趋同为"核心城市聚焦、产品力升级、<b>轻重并举与 REITs</b>、存量盘活"；A 股房地产板块年初至今下跌约 12.33%，华润置地逆势上涨约 12.8%。</li>
+        </ul>
+      </div>
+      <div class="src">来源：克而瑞地产研究（新浪财经转载，9 月 13 日） <a href="https://cj.sina.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fstock%2Festate%2Fsd%2F2026-09-13%2Fdoc-inirrxsc0618700.shtml" target="_blank">finance.sina.com.cn</a> ｜ 华盛通（繁体版） <a href="https://www.hstong.com/news/hk/detail/26091311163301564" target="_blank">www.hstong.com</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-rank">榜单数据</span>
+        <h4>风财讯：代建行业进入"价值兑现期"——中指研究院关键门槛数据（9 月 8 日）</h4></div>
+      <div class="body">
+        <ul>
+          <li>中指研究院数据：2026 上半年代建企业新签规模前五门槛为 <b>680 万㎡</b>，较去年同期下降 17.7%；前五、前十、前二十企业新签约规划建面分别同比下降 21.5%、12.6% 和 3.8%。</li>
+          <li>竞争逻辑转向：委托方关注点从签约规模与费率，转向"项目能否卖得动、能否交得好、最终能否兑现资产价值"；产品研策、营销转化、建造管理、数字化应用与交付运营的协同能力成为新分水岭。</li>
+          <li>场景拓宽：城市更新、存量资产盘活、保障性住房、产业园区、商业办公、长租公寓等需求持续涌现。</li>
+        </ul>
+      </div>
+      <div class="src">来源：风财讯（今日头条，9 月 8 日） <a href="https://www.toutiao.com/article/7683064820408648201" target="_blank">www.toutiao.com</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-rank">中报数据</span>
+        <h4>中指研究院《房企动态》（9 月 8 日）：龙湖集团智慧营造业务经营数据</h4></div>
+      <div class="body">
+        <ul>
+          <li>龙湖龙智造 2026 上半年营业收入 <b>6.5 亿元</b>（同比 +3.3%）；代建销售额 112 亿元；代建交付建筑面积 71 万㎡；委托方满意度 98%。</li>
+          <li>累计服务项目 330 余个、总建筑面积约 4600 万㎡；服务业务（物业服务 + 智慧营造）收入 64.0 亿元（+2.2%）。</li>
+        </ul>
+      </div>
+      <div class="src">来源：中指研究院 <a href="https://www.cih-index.com/news/2026-09-08/55061648.html" target="_blank">www.cih-index.com</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-rank">企业观察</span>
+        <h4>《证券市场周刊》：从规模竞速到价值兑现，龙湖龙智造上半年核心指标稳居行业前五（9 月 11 日）</h4></div>
+      <div class="body">
+        <ul>
+          <li>新签代建面积 696 万㎡、代建销售金额 112 亿元，均位列行业第 4；累计交付 4400 余套 / 71 万㎡，位列行业第 3。</li>
+          <li>荣誉口径：获评中国房地产业协会首批代建企业综合能力<b>三星级</b>企业（当期评价最高星级）；入选中指研究院 2026 代建运营优秀企业、克而瑞 2025 年中国房地产企业代建综合能力 TOP5。</li>
+          <li>存量盘活被定位为"代建能力的新考场"：城市更新、存量资产盘活、纾困重整成为新的价值舞台。</li>
+        </ul>
+      </div>
+      <div class="src">来源：证券市场周刊（9 月 11 日） <a href="https://static.weeklyonstock.com/26/0911/wd151529.html" target="_blank">static.weeklyonstock.com</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-rank">企业观察</span>
+        <h4>东方网：轻资产赛道强势崛起，新城建管成新城控股全新增长极（9 月 7 日）</h4></div>
+      <div class="body">
+        <ul>
+          <li>2026 上半年新城建管新增签约项目 <b>42 个</b>，新签代建项目规划建面 553 万㎡，代建项目交付 70 万㎡；累计管理项目 179 个、累计总管理建面超 3200 万㎡。</li>
+          <li>中指《2026 上半年中国房地产代建企业排行榜》口径：新签代建面积行业 Top12、代建销售规模 42 亿元列 Top9、交付 3750 套 / 70 万㎡ 列 Top4。</li>
+          <li>组织架构：2025 年 11 月将建管业务"一拆为二"，成立新城万嘉建管、新城宏图建管，建立内部竞赛机制；同期推进公募 REITs（广发新城吾悦 REIT 已获受理），指向"投融管退"闭环。</li>
+        </ul>
+      </div>
+      <div class="src">来源：东方网企业频道（9 月 7 日） <a href="https://qiye.eastday.com/n35/n86/20260907/93e96bf14c404a9492eaf56afce1ceb0.html" target="_blank">qiye.eastday.com</a></div>
+    </div>
+  </section>
+
+  <!-- ============ 六、行业组织成果 ============ -->
+  <section>
+    <h2><span class="no">六</span>行业组织成果</h2>
+
+    <div class="item">
+      <div class="head"><span class="badge b-org">协会动态</span>
+        <h4>中国房协代建分会副会长王俊峰专访：行业从"红利驱动"转向"专业能力驱动"（9 月 9—10 日）</h4></div>
+      <div class="body">
+        <ul>
+          <li><b>协会层面成果与在办事项：</b>中国房协代建分会将持续完善代建行业服务标准、<b>建立合理费率参考体系</b>、落地<b>企业综合能力评价标准</b>，为委托方提供科学决策依据，引导破除单纯比价思维、树立"价值定价"共识。</li>
+          <li>已落地成果回溯：首批代建企业综合能力星级评价成果已于 2026 年 7 月海南"房地产代建高质量发展大会"发布（最高三星级；龙湖龙智造、金地管理等获三星级，新城控股获二星级，凤凰智拓入选首批星级企业全国仅 18 家）；同期启动《代建项目典型案例集（第二辑）》征集。</li>
+          <li><b>四大中长期增量赛道：</b>保障性住房代建（保租房、共有产权房、安置房）；城市更新与片区综合开发代建；风险纾困盘活代建（保交楼、烂尾项目处置）；公共配套与特色不动产代建（学校、医院、养老社区、超低能耗建筑、乡村振兴配套）。海外代建与产业链延伸服务为补充。</li>
+          <li><b>纾困赛道风险表述（法务重点）：</b>烂尾楼盘活、保交楼纾困的最大风险集中在<b>历史债务边界模糊、工程修复成本不可控、业主维稳压力大</b>三大痛点；企业应建立全流程风控——事前穿透尽调划定债务隔离线、清晰划分各方权责、提前测算整改成本，并设立常态化沟通渠道、前置制定交付与赔付预案。</li>
+          <li>分化判断：未来 3—5 年行业分化持续加剧，企业需具备价值定义力、系统解题力、资源整合力、经营兑现力、利他共建力五大核心能力。</li>
+        </ul>
+      </div>
+      <div class="src">来源：每日经济新闻（今日头条，9 月 9 日） <a href="https://www.toutiao.com/article/7683474338238726675" target="_blank">www.toutiao.com</a> ｜ 同花顺财经（9 月 10 日） <a href="https://news.10jqka.com.cn/20260910/c679798196.shtml" target="_blank">news.10jqka.com.cn</a></div>
+    </div>
+
+    <div class="notice"><b>提示：</b>本周中国房协代建分会无新增正式文件发布；上述专访中披露的"费率参考体系""综合能力评价标准"为在办事项，建议纳入后续跟踪清单（若正式发布，将直接影响代建项目招标评审与代建合同费率条款的谈判依据）。</div>
+  </section>
+
+  <!-- ============ 七、头部代建公司动态 ============ -->
+  <section>
+    <h2><span class="no">七</span>头部代建公司动态</h2>
+
+    <div class="item">
+      <div class="head"><span class="badge b-co">龙湖龙智造</span>
+        <h4>9 月 9 日签约贵阳双龙航空港经济区鱼梁河南侧地块，实现龙智造首进贵阳</h4></div>
+      <div class="body">项目紧邻轨道交通 2 号线见龙洞站，龙湖龙智造将提供定位策划、代建代销全流程服务。同日龙湖商业携手贵州思乐为置地落地贵州首座天街（遵义新蒲，总经营面积约 12.4 万㎡，预计 2027 年下半年启幕）。龙湖 2026 上半年商业租金收入 59.8 亿元，商场期末出租率 97.4%，全国在营商场 96 座。</div>
+      <div class="src">来源：观点网（中国香港，9 月 9 日） <a href="https://www.guandian.hk/article/20260909/599226.html" target="_blank">www.guandian.hk</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-co">招商建管</span>
+        <h4>中标徐州铜山区 XT2021-19 号地块代建及销售管理服务，投标费率 4.9958%</h4></div>
+      <div class="body">徐州市公共资源交易中心 9 月 4 日发布中标候选人公示，深圳招商建设管理有限公司以 92.94 分综合得分位列第一中标候选人，公示期 9 月 4 日至 9 月 9 日。项目委托方为徐州茂骏房地产开发有限公司。招商建管系招商蛇口设立的代建业务平台，2024 上半年招商蛇口获取代建项目 26 个、新增管理面积 178 万㎡，销售业绩在徐州等城市进入当地 TOP5。<b>本次投标费率 4.9958% 显著高于行业普遍的 1%—3% 区间，可作优质项目费率谈判的参照样本。</b></div>
+      <div class="src">来源：观点地产网（新浪财经转载，9 月 10 日） <a href="https://www.toutiao.com/article/7683901919521243682" target="_blank">www.toutiao.com</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-co">绿城管理</span>
+        <h4>浙江丽水莲都区大港头镇出让 C 地块 EPC+房地产开发服务项目评审结果公示（9 月 9 日），绿城房地产建设管理集团为投标人之一</h4></div>
+      <div class="body">项目开标时间 2026 年 8 月 31 日，中标结果公告 9 月 7 日，评审结果公示 9 月 9 日；同场投标方包括中天美好集团、浙江兴元建设管理、蓝绿双城科技集团。<b>模式特点：EPC+房地产开发服务打包招标，代建方需同时具备工程总承包与开发管理能力，是"EPC+代建"组合模式的落地样本。</b>同期绿城管理苏州渭塘纯低密新盘设计方案公示（9 月 7 日）。</div>
+      <div class="src">来源：丽水市公共资源交易中心 <a href="https://lssggzy.lishui.gov.cn/col/col1229783774/art/2026/art_d5d638ef427466bdf3188e6bbe80704c.html" target="_blank">lssggzy.lishui.gov.cn</a> ｜ 富途牛牛（观点新媒体，9 月 7 日） <a href="https://www.futunn.com/stock/09979-HK/news" target="_blank">www.futunn.com</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-co">远洋建管</span>
+        <h4>深圳市远洋开发建设管理有限公司中标"九江水现代化智造中心"（地块一、地块二）代建服务</h4></div>
+      <div class="body">开标日期 2026 年 9 月 8 日，招标场所为东莞市公共资源交易中心，项目法人/招标人为东莞市九江水实业投资有限公司。第一中标候选人评标得分 91.00 分（第二、第三候选人分别为 50.00 分、46.50 分）；服务收费系数为固定值 0.80；代建期限自签订代建合同之日起至缺陷责任管理期结束且完成资产移交和档案移交手续之日止。<b>关注点：产业园区类（智造中心）代建需求释放，且代建费以"服务收费系数"固定值形式报价。</b></div>
+      <div class="src">来源：势在必得投标（东莞市公共资源交易中心中标候选人公示） <a href="https://www.sizebid.com/002/guangdong/guangdong/2026/5a8bcfc8c63675f64d08e260c5beb403.html" target="_blank">www.sizebid.com</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-co">凤凰智拓建管</span>
+        <h4>广州天河 AI 云谷项目 9 月 7 日正式开工，凤凰智拓建管作为全过程管理方</h4></div>
+      <div class="body">项目坐落天河智慧城核心腹地，定位现代都市工业园区，重点发展人工智能、无人装备、生物医药等创新产业，以中试成果转化为主功能。该项目于 2026 年 8 月正式签约，是凤凰智拓在产业代管代建赛道的重点落子；凤凰智拓将统筹前期策划、开发报建、设计管理、成本管控、工程建设等全链条业务。<b>其企业定位正从"传统工程代管代建模式"向"综合解决方案服务商"转型。</b></div>
+      <div class="src">来源：碧桂园集团官网（9 月 7 日） <a href="https://www.countrygarden.com.cn/big5/news/data?newsid=10173&amp;typeid=54" target="_blank">www.countrygarden.com.cn</a></div>
+    </div>
+
+    <div class="item">
+      <div class="head"><span class="badge b-co">旭辉建管 / 蓝绿双城</span>
+        <h4>旭辉建管中标重庆两江新区高科江澜三、四期全过程建设管理服务；蓝绿双城参与丽水莲都 EPC+开发服务项目投标</h4></div>
+      <div class="body">旭辉建管中标项目位于礼嘉板块九曲河畔，总占地约 443 亩，四期容积率约 1.0、建筑面积约 9.6 万㎡，为重庆主城核心区稀缺低密住区（9 月 3 日报道，9 月 4 日两江新区要闻汇总）。蓝绿双城科技集团与绿城房地产建设管理集团同场参与丽水莲都区大港头镇 EPC+房地产开发服务项目投标（9 月 9 日评审结果公示），反映头部企业在"EPC+代建"打包模式上的正面竞争。</div>
+      <div class="src">来源：观点新媒体（腾讯网两江新区要闻，9 月 4 日） <a href="https://new.qq.com/rain/a/20260904A02FG800?refer=cp_1009" target="_blank">new.qq.com</a> ｜ 丽水市公共资源交易中心 <a href="https://lssggzy.lishui.gov.cn/col/col1229783774/art/2026/art_d5d638ef427466bdf3188e6bbe80704c.html" target="_blank">lssggzy.lishui.gov.cn</a></div>
+    </div>
+  </section>
+
+  <!-- ============ 八、法务视角要点提示 ============ -->
+  <section>
+    <h2><span class="no">八</span>法务视角要点提示</h2>
+    <ol class="points">
+      <li><span class="cat">合同审查</span><b>代建管理费首次出现"差额累进 + 总额上限"双重管控，费率条款设计空间被压缩。</b>郑州航空港区办法明确代建管理费实行差额累进、总额上限管控，并覆盖立项至缺陷责任期结束全流程。审查代建合同时应同步核对：代建费计取方式是否与委托方所在地办法一致、是否设置总额上限、以及总额上限被突破时的调整与争议解决路径。</li>
+      <li><span class="cat">合同审查</span><b>"委托单位—代建单位—使用单位"三方架构的权责边界须逐项落定。</b>航空港区办法对三类主体分别定义，并明确委托单位负责统筹组织、选定代建单位、组织使用单位与代建单位签订合同、实施全过程监督及履约考核评价；使用单位是项目用地权属人和预算申报列支单位。合同起草时应避免将使用单位的配合义务、资产接收义务虚化，防止履约中出现"有权无责"或"有责无权"的错配。</li>
+      <li><span class="cat">监管动向</span><b>代建制地方立法进入新一轮密集修订期，合同对标依据持续刷新。</b>本周郑州航空港区印发（9 月 1 日生效，废止郑港〔2025〕2 号）、深圳龙华区与察雅县公开征求意见；叠加安徽《城市更新"十五五"规划》（251 个更新片区）释放的项目池，代建合同审查必须"一地一策"核对当地最新办法，尤其注意新旧办法交替期的合同衔接条款（航空港区明确存量项目可按原合同继续执行，此类过渡安排应争取在合同中明确固定）。</li>
+      <li><span class="cat">风险防控</span><b>AMC 系代建的"低费率 + 高风险"特征已在中报中显性化，收益模式需重新测算。</b>信达地产 2026 上半年新增计容建面全部为代建项目、新开工项目中代建占 85%，但代建项目销售金额仅 4.15 亿元、占销售总额约 11.2%，房地产开发业务收入仍占主营收入九成以上；代建项目多涉不良资产盘活、需承担额外风险，实际利润率可能低于行业平均水平。承接纾困类代建业务时，应在报价中单列历史债务尽调成本、工程修复成本与业主维稳成本。</li>
+      <li><span class="cat">交易对手</span><b>资金方的资本约束直接决定纾困代建订单的可持续性，须纳入交易对手尽调。</b>中国信达破产重整市占率超 25%（2022 年以来参与 11 家上市公司重整），是纾困代建的主要资金方；但其集团 2026 上半年归母净利润同比下降 65.6%、核心一级资本充足率 9.04% 仅满足基础监管要求，且监管要求 AMC 聚焦不良资产主业。与 AMC 系主体合作时，建议对其项目级资金投放能力、资金封闭安排作专项核查。</li>
+      <li><span class="cat">纾困结构</span><b>最高法 137 号纪要"三代协议"豁免规则，为凤樾府类"信托持股 + 代建操盘"结构提供司法定性依据。</b>代建 / 代管（权属不转移、收益归委托方）与代持（阶段性股权托管 + 约定条件回购）两类模式均获司法正面评价，管理人不得解除、不得撤销、不作无效认定。对名义委托方为项目公司、实际控制人为信托股东的结构，建议在合同中明确协议定性（代建 or 代持）、政府协调介入的书面留痕、以及破产情形下协议继续履行的条款保障。</li>
+      <li><span class="cat">收益模式</span><b>费率下行与"价值定价"转向并存，合同中应设置费率与成本的双向调整机制。</b>行业费率结构已根本改变（多数项目落在 1%—3% 区间），房协代建分会正推进费率参考体系与企业综合能力评价标准；而本周招商建管徐州项目投标费率 4.9958%、远洋建管东莞项目服务收费系数固定 0.80，说明优质项目仍具备费率议价空间。建议在合同中设置：费率与代建范围（是否含代销、招商、运营）的对应关系、成本超支分担机制、以及委托方新增工作内容的费率调整条款。</li>
+      <li><span class="cat">监管动向</span><b>代建项目招标全面进入数字化范本时代，程序合规风险前移。</b>湖南自 2026 年 9 月 3 日起停用老系统、代建项目一律在"机器管招投标"系统按《湖南省政府投资项目代建单位标准招标文件（2026 年版）》开展交易；9 月 3 日前已挂网项目不作回溯调整。涉及湖南区域代建项目时，须核验招标公告发布平台与范本版本，避免因系统切换导致的程序瑕疵；其他省份可预判同类改革跟进。</li>
+      <li><span class="cat">风险防控</span><b>保交楼"国企收购融资 + 监管账户专款专用"路径普及，付款节点须与资金释放节奏严格匹配。</b>南充蓝湾半岛案例中，国企收购款须打入监管账户专款专用后项目方可续建；定安案例则通过国有平台收购房源、退还农民工工资保证金等多元渠道注入续建资金。代建合同应明确：委托方付款义务以监管资金到账为前提时的顺延条款、监管资金未按时到位的停工与工期索赔权、以及资产接收方的确认机制。</li>
+    </ol>
+  </section>
+
+  <footer>
+    本报告由自动化任务「房地产代建业务每周周报」生成 · 第 3 期 · 收集窗口 2026-09-07 至 2026-09-13<br>
+    信息来源均附原文链接，引用请核对原文；政策文件以官方发布文本为准<br>
+    收集方向：政策制度 / 合同文本 / 头部财报 / 纾困动态 / 榜单研究 / 行业组织 / 头部动态 / 法务要点
+  </footer>
+
+</div>
+</body>
+</html>
